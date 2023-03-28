@@ -35,5 +35,8 @@ r : run
 doc :
 	cd ./doc
 	doxygen doxyfile
+	make -s -C ./latex
+	cp ./latex/refman.pdf ./Documentation.pdf
+	rm ./latex/refman.aux ./latex/refman.idx ./latex/refman.ilg ./latex/refman.ind ./latex/refman.log ./latex/refman.pdf ./latex/refman.toc
 
 d:doc
