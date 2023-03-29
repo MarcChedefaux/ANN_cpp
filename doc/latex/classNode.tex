@@ -2,6 +2,121 @@
 \label{classNode}\index{Node@{Node}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Class \mbox{\hyperlink{classNode}{Node}}.  
+
+
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/node.\+hpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNode_abf23e919d8a11abd71d68ad55ed81861}{Node}} (int nb\+In)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNode}{Node}} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNode_aa5359d697f140425c871d08de0410813}{process\+Outputs}} (std\+::vector$<$ int $>$ inputs)
+\begin{DoxyCompactList}\small\item\em Method to process the outputs of the node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNode_a17f86b25f2c6bb58712a7818f6cc046a}{get\+Weight}} (int index)
+\begin{DoxyCompactList}\small\item\em Get one of the weight. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNode_ae4f12ed53034c8cee052d19719cc9b00}{get\+Bias}} ()
+\begin{DoxyCompactList}\small\item\em Get the Bias. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNode_aae38eb1a16438984ee4d438e9e13a7d7}{get\+Nb\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{classNode}{Node}}. 
+
+Class which represent the behaviour of a \mbox{\hyperlink{classNode}{Node}} in an Artificial Neural \mbox{\hyperlink{classNetwork}{Network}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_abf23e919d8a11abd71d68ad55ed81861}\label{classNode_abf23e919d8a11abd71d68ad55ed81861}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{nb\+In }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNode}{Node}} object. 
+
+Construct a new \mbox{\hyperlink{classNode}{Node}} object by creating random weights and a random bias.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+In} & corresponds to the number of inputs of the created \mbox{\hyperlink{classNode}{Node}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_ae4f12ed53034c8cee052d19719cc9b00}\label{classNode_ae4f12ed53034c8cee052d19719cc9b00}} 
+\index{Node@{Node}!getBias@{getBias}}
+\index{getBias@{getBias}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getBias()}{getBias()}}
+{\footnotesize\ttfamily double Node\+::get\+Bias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Bias. 
+
+\begin{DoxyReturn}{Returns}
+double \+: the bias. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_aae38eb1a16438984ee4d438e9e13a7d7}\label{classNode_aae38eb1a16438984ee4d438e9e13a7d7}} 
+\index{Node@{Node}!getNbInput@{getNbInput}}
+\index{getNbInput@{getNbInput}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getNbInput()}{getNbInput()}}
+{\footnotesize\ttfamily int Node\+::get\+Nb\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of input. 
+
+\begin{DoxyReturn}{Returns}
+int \+: the number of input. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_a17f86b25f2c6bb58712a7818f6cc046a}\label{classNode_a17f86b25f2c6bb58712a7818f6cc046a}} 
+\index{Node@{Node}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily double Node\+::get\+Weight (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get one of the weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & of the weight we want. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double \+: the weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_aa5359d697f140425c871d08de0410813}\label{classNode_aa5359d697f140425c871d08de0410813}} 
+\index{Node@{Node}!processOutputs@{processOutputs}}
+\index{processOutputs@{processOutputs}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{processOutputs()}{processOutputs()}}
+{\footnotesize\ttfamily double Node\+::process\+Outputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Method to process the outputs of the node. 
+
+Method which realise the calculation of the ouput by doing the dot product of the weights by the inputs. Then it add the bias and finally it use the Activation Function on the resulting scalar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \+: the inputs of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double \+: the state of the node after the calculation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/node.\+hpp\item 
+/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/node.\+cpp\end{DoxyCompactItemize}

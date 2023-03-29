@@ -62,13 +62,166 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Node Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<hr/>The documentation for this class was generated from the following file:<ul>
+
+<p>Class <a class="el" href="classNode.html" title="Class Node.">Node</a>.  
+ <a href="classNode.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="node_8hpp_source.html">node.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:abf23e919d8a11abd71d68ad55ed81861"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#abf23e919d8a11abd71d68ad55ed81861">Node</a> (int nbIn)</td></tr>
+<tr class="memdesc:abf23e919d8a11abd71d68ad55ed81861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classNode.html" title="Class Node.">Node</a> object.  <a href="classNode.html#abf23e919d8a11abd71d68ad55ed81861">More...</a><br /></td></tr>
+<tr class="separator:abf23e919d8a11abd71d68ad55ed81861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5359d697f140425c871d08de0410813"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#aa5359d697f140425c871d08de0410813">processOutputs</a> (std::vector&lt; int &gt; inputs)</td></tr>
+<tr class="memdesc:aa5359d697f140425c871d08de0410813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to process the outputs of the node.  <a href="classNode.html#aa5359d697f140425c871d08de0410813">More...</a><br /></td></tr>
+<tr class="separator:aa5359d697f140425c871d08de0410813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f86b25f2c6bb58712a7818f6cc046a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">getWeight</a> (int index)</td></tr>
+<tr class="memdesc:a17f86b25f2c6bb58712a7818f6cc046a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get one of the weight.  <a href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">More...</a><br /></td></tr>
+<tr class="separator:a17f86b25f2c6bb58712a7818f6cc046a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f12ed53034c8cee052d19719cc9b00"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">getBias</a> ()</td></tr>
+<tr class="memdesc:ae4f12ed53034c8cee052d19719cc9b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Bias.  <a href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">More...</a><br /></td></tr>
+<tr class="separator:ae4f12ed53034c8cee052d19719cc9b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae38eb1a16438984ee4d438e9e13a7d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">getNbInput</a> ()</td></tr>
+<tr class="memdesc:aae38eb1a16438984ee4d438e9e13a7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of input.  <a href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">More...</a><br /></td></tr>
+<tr class="separator:aae38eb1a16438984ee4d438e9e13a7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="classNode.html" title="Class Node.">Node</a>. </p>
+<p>Class which represent the behaviour of a <a class="el" href="classNode.html" title="Class Node.">Node</a> in an Artificial Neural <a class="el" href="classNetwork.html">Network</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abf23e919d8a11abd71d68ad55ed81861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf23e919d8a11abd71d68ad55ed81861">&#9670;&nbsp;</a></span>Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbIn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classNode.html" title="Class Node.">Node</a> object. </p>
+<p>Construct a new <a class="el" href="classNode.html" title="Class Node.">Node</a> object by creating random weights and a random bias.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbIn</td><td>corresponds to the number of inputs of the created <a class="el" href="classNode.html" title="Class Node.">Node</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae4f12ed53034c8cee052d19719cc9b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4f12ed53034c8cee052d19719cc9b00">&#9670;&nbsp;</a></span>getBias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Node::getBias </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Bias. </p>
+<dl class="section return"><dt>Returns</dt><dd>double : the bias. </dd></dl>
+
+</div>
+</div>
+<a id="aae38eb1a16438984ee4d438e9e13a7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae38eb1a16438984ee4d438e9e13a7d7">&#9670;&nbsp;</a></span>getNbInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Node::getNbInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of input. </p>
+<dl class="section return"><dt>Returns</dt><dd>int : the number of input. </dd></dl>
+
+</div>
+</div>
+<a id="a17f86b25f2c6bb58712a7818f6cc046a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f86b25f2c6bb58712a7818f6cc046a">&#9670;&nbsp;</a></span>getWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Node::getWeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get one of the weight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>of the weight we want. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double : the weight. </dd></dl>
+
+</div>
+</div>
+<a id="aa5359d697f140425c871d08de0410813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5359d697f140425c871d08de0410813">&#9670;&nbsp;</a></span>processOutputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Node::processOutputs </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>inputs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to process the outputs of the node. </p>
+<p>Method which realise the calculation of the ouput by doing the dot product of the weights by the inputs. Then it add the bias and finally it use the Activation Function on the resulting scalar.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputs</td><td>: the inputs of the node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double : the state of the node after the calculation. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/marc/Documents/1. Développement/4. C++/1. Neural Network/ANN_cpp/src/<a class="el" href="node_8hpp_source.html">node.hpp</a></li>
+<li>/home/marc/Documents/1. Développement/4. C++/1. Neural Network/ANN_cpp/src/node.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
