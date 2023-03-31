@@ -12,9 +12,11 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNode_abf23e919d8a11abd71d68ad55ed81861}{Node}} (int nb\+In)
+\mbox{\hyperlink{classNode_aa52db43e5749b5b02612368d5ce25456}{Node}} (int nb\+In=0)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNode}{Node}} object. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classNode_aa5359d697f140425c871d08de0410813}{process\+Outputs}} (std\+::vector$<$ int $>$ inputs)
+\mbox{\hyperlink{classNode}{Node}} \& \mbox{\hyperlink{classNode_a086667ffffb3a5f9843a90c499fe90bb}{operator=}} (const \mbox{\hyperlink{classNode}{Node}} \&)=default
+\begin{DoxyCompactList}\small\item\em Egal operator for the node object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
 \begin{DoxyCompactList}\small\item\em Method to process the outputs of the node. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classNode_a17f86b25f2c6bb58712a7818f6cc046a}{get\+Weight}} (int index)
 \begin{DoxyCompactList}\small\item\em Get one of the weight. \end{DoxyCompactList}\item 
@@ -30,11 +32,11 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 Class which represent the behaviour of a \mbox{\hyperlink{classNode}{Node}} in an Artificial Neural \mbox{\hyperlink{classNetwork}{Network}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classNode_abf23e919d8a11abd71d68ad55ed81861}\label{classNode_abf23e919d8a11abd71d68ad55ed81861}} 
+\mbox{\Hypertarget{classNode_aa52db43e5749b5b02612368d5ce25456}\label{classNode_aa52db43e5749b5b02612368d5ce25456}} 
 \index{Node@{Node}!Node@{Node}}
 \index{Node@{Node}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{nb\+In }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{nb\+In = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -94,11 +96,24 @@ Get one of the weight.
 \begin{DoxyReturn}{Returns}
 double \+: the weight. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classNode_aa5359d697f140425c871d08de0410813}\label{classNode_aa5359d697f140425c871d08de0410813}} 
+\mbox{\Hypertarget{classNode_a086667ffffb3a5f9843a90c499fe90bb}\label{classNode_a086667ffffb3a5f9843a90c499fe90bb}} 
+\index{Node@{Node}!operator=@{operator=}}
+\index{operator=@{operator=}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}}\& Node\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNode}{Node}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Egal operator for the node object. 
+
+\begin{DoxyReturn}{Returns}
+the address \mbox{\hyperlink{classNode}{Node}} of the left sided \mbox{\hyperlink{classNode}{Node}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}\label{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}} 
 \index{Node@{Node}!processOutputs@{processOutputs}}
 \index{processOutputs@{processOutputs}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{processOutputs()}{processOutputs()}}
-{\footnotesize\ttfamily double Node\+::process\+Outputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{inputs }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double Node\+::process\+Outputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
 
 
 

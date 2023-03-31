@@ -23,7 +23,14 @@ class Node {
          * 
          * @param nbIn corresponds to the number of inputs of the created Node.
          */
-        Node(int nbIn);
+        Node(int nbIn = 0);
+
+        /**
+         * @brief Egal operator for the node object.
+         * 
+         * @return the address Node of the left sided Node object.
+         */
+        Node& operator=(const Node&) = default;
 
         /**
          * @brief Method to process the outputs of the node
@@ -33,7 +40,7 @@ class Node {
          * @param inputs : the inputs of the node.
          * @return double : the state of the node after the calculation.
          */
-        double processOutputs(std::vector<int> inputs);
+        double processOutputs(std::vector<double> inputs);
 
         /**
          * @brief Get one of the weight.

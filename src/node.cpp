@@ -2,14 +2,14 @@
 
 Node::Node(int nbIn) {
     nbInput = nbIn;
-    bias = (double) rand() / RAND_MAX;
+    bias =  200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
     for (int i = 0; i<nbInput; i++) {
-        double newWeight = (double) rand() / RAND_MAX;
+        double newWeight = 200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
         weights.emplace_back(newWeight);
     }
 }
 
-double Node::processOutputs(std::vector<int> inputs) {
+double Node::processOutputs(std::vector<double> inputs) {
     if (inputs.size() != nbInput){
         throw std::invalid_argument("Input size incompatible");
     }
