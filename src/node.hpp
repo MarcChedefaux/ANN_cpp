@@ -1,6 +1,7 @@
 #ifndef NODE
 #define NODE
 
+#include "activationFunction.hpp"
 #include <vector>
 #include <random>
 #include <stdexcept>
@@ -13,6 +14,7 @@ class Node {
     private:
         int nbInput; /*! number of input of the node */
         double bias; /*! Node bias */
+        activationFunction activationfunction; /*! Node activation function*/
         std::vector<double> weights;
     public:
 
@@ -23,10 +25,16 @@ class Node {
          * 
          * @param nbIn corresponds to the number of inputs of the created Node.
          */
-        Node(int nbIn = 0);
+        Node(activationFunction function, int nbIn);
 
         /**
-         * @brief Egal operator for the node object.
+         * @brief Empty constructor for Node object
+         * 
+         */
+        Node();
+
+        /**
+         * @brief Equal operator for the node object.
          * 
          * @return the address Node of the left sided Node object.
          */
@@ -63,6 +71,13 @@ class Node {
          * @return int : the number of input.
          */
         int getNbInput();
+
+        /**
+         * @brief Get the Activation Function of the Node
+         * 
+         * @return activationFunction : the Node Activation Function.
+         */
+        activationFunction getActivationFunction();
 
 };
 

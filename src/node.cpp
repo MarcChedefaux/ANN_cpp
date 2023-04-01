@@ -1,12 +1,17 @@
 #include "node.hpp"
 
-Node::Node(int nbIn) {
+Node::Node(activationFunction function, int nbIn) {
     nbInput = nbIn;
+    activationfunction = function;
     bias =  200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
     for (int i = 0; i<nbInput; i++) {
         double newWeight = 200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
         weights.emplace_back(newWeight);
     }
+}
+
+Node::Node() {
+    nbInput = 0;
 }
 
 double Node::processOutputs(std::vector<double> inputs) {
@@ -18,7 +23,7 @@ double Node::processOutputs(std::vector<double> inputs) {
         res += weights.at(i) * inputs.at(i);
     }
     res += bias;
-    return res;
+    return activationfunction(res);
 }
 
 double Node::getWeight(int index) {

@@ -7,4 +7,5 @@ add_executable(ANN
     network.cpp
     layer.cpp
     node.cpp
+    activationFunction.cpp
     )

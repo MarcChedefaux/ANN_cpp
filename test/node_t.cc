@@ -1,16 +1,15 @@
 #include "node.hpp"
+#include "activationFunction.hpp"
 #include <vector>
 #include <gtest/gtest.h>
 
 namespace {
     class NodeTest : public ::testing::Test {
         protected:
-            FRIEND_TEST(NodeTest, InputNumber);
-            FRIEND_TEST(NodeTest, CopyConstructor);
 
             virtual void SetUp() {
-                n1 = Node(10);
-                n2 = Node(100);
+                n1 = Node(Identity,10);
+                n2 = Node(Identity,100);
             }
 
             virtual void TearDown() {
