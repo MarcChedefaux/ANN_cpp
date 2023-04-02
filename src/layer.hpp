@@ -5,6 +5,12 @@
 #include "node.hpp"
 #include "activationFunction.hpp"
 
+/**
+ * @brief Class Layer
+ * 
+ * which implements all the behaviour of a layer
+ * 
+ */
 class Layer {
     private:
         int nbInput; /*! Number of inputs in this layer*/
