@@ -72,17 +72,44 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LAYER</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LAYER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;node.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classLayer.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLayer.html">Layer</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::vector&lt;Node&gt; nodes;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    public :</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classLayer.html">Layer</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassLayer_html"><div class="ttname"><a href="classLayer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> layer.hpp:6</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;node.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;activationFunction.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classLayer.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLayer.html">Layer</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">int</span> nbInput; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">int</span> nbNodes; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::vector&lt;Node&gt; nodes; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        activationFunction activationfunction; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    public :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Layer</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Layer</a>(activationFunction <span class="keyword">function</span>, <span class="keywordtype">int</span> nbInput, <span class="keywordtype">int</span> nbNodes);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d">   35</a></span>&#160;        <a class="code" href="classLayer.html">Layer</a>&amp; <a class="code" href="classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d">operator=</a>(<span class="keyword">const</span> <a class="code" href="classLayer.html">Layer</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;double&gt; <a class="code" href="classLayer.html#ac55e49ac5a2cd79956232b629b463158">processOutputs</a>(std::vector&lt;double&gt; inputs);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classLayer.html#a0276997801564e8207a4e47db0deb898">getNbInput</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classLayer.html#a74318a5b352c69b4c404d8c48a38ba24">getNbNodes</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classNode.html">Node</a> <a class="code" href="classLayer.html#a24336f87f16d53c9614ff7f7c8c59da7">getNode</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        activationFunction <a class="code" href="classLayer.html#a7189ed4f0e3a9cb474b5ba5c1cf5de37">getActivationFunction</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassLayer_html"><div class="ttname"><a href="classLayer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> layer.hpp:8</div></div>
+<div class="ttc" id="aclassLayer_html_a0276997801564e8207a4e47db0deb898"><div class="ttname"><a href="classLayer.html#a0276997801564e8207a4e47db0deb898">Layer::getNbInput</a></div><div class="ttdeci">int getNbInput()</div><div class="ttdoc">Get the NbInput object.</div><div class="ttdef"><b>Definition:</b> layer.cpp:26</div></div>
+<div class="ttc" id="aclassLayer_html_a24336f87f16d53c9614ff7f7c8c59da7"><div class="ttname"><a href="classLayer.html#a24336f87f16d53c9614ff7f7c8c59da7">Layer::getNode</a></div><div class="ttdeci">Node getNode(int index)</div><div class="ttdoc">Get the Node object at the position index.</div><div class="ttdef"><b>Definition:</b> layer.cpp:38</div></div>
+<div class="ttc" id="aclassLayer_html_a3bca6ae0850e82fc2ca1198330489a4d"><div class="ttname"><a href="classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d">Layer::operator=</a></div><div class="ttdeci">Layer &amp; operator=(const Layer &amp;)=default</div><div class="ttdoc">Equal operator for the Layer object.</div></div>
+<div class="ttc" id="aclassLayer_html_a7189ed4f0e3a9cb474b5ba5c1cf5de37"><div class="ttname"><a href="classLayer.html#a7189ed4f0e3a9cb474b5ba5c1cf5de37">Layer::getActivationFunction</a></div><div class="ttdeci">activationFunction getActivationFunction()</div><div class="ttdoc">Get the Activation Function object.</div><div class="ttdef"><b>Definition:</b> layer.cpp:34</div></div>
+<div class="ttc" id="aclassLayer_html_a74318a5b352c69b4c404d8c48a38ba24"><div class="ttname"><a href="classLayer.html#a74318a5b352c69b4c404d8c48a38ba24">Layer::getNbNodes</a></div><div class="ttdeci">int getNbNodes()</div><div class="ttdoc">Get the NbNodes object.</div><div class="ttdef"><b>Definition:</b> layer.cpp:30</div></div>
+<div class="ttc" id="aclassLayer_html_a8f623c7c4737dc29ecc86978d243ac6f"><div class="ttname"><a href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Layer::Layer</a></div><div class="ttdeci">Layer()</div><div class="ttdoc">Construct a new empty Layer object.</div><div class="ttdef"><b>Definition:</b> layer.cpp:3</div></div>
+<div class="ttc" id="aclassLayer_html_ac55e49ac5a2cd79956232b629b463158"><div class="ttname"><a href="classLayer.html#ac55e49ac5a2cd79956232b629b463158">Layer::processOutputs</a></div><div class="ttdeci">std::vector&lt; double &gt; processOutputs(std::vector&lt; double &gt; inputs)</div><div class="ttdoc">process the outputs of this layer</div><div class="ttdef"><b>Definition:</b> layer.cpp:17</div></div>
+<div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">Class Node.</div><div class="ttdef"><b>Definition:</b> node.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,8 +22,10 @@ add_executable(
   test.cc
   node_t.cc
   activationFunction_t.cc
+  layer_t.cc
   ../src/node.cpp
   ../src/activationFunction.cpp
+  ../src/layer.cpp
 )
 target_link_libraries(
   ANN_test

@@ -1,7 +1,150 @@
 \hypertarget{classLayer}{}\doxysection{Layer Class Reference}
 \label{classLayer}\index{Layer@{Layer}}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/layer.\+hpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}{Layer}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new empty \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}{Layer}} (activation\+Function function, int nb\+Input, int nb\+Nodes)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLayer}{Layer}} \& \mbox{\hyperlink{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}{operator=}} (const \mbox{\hyperlink{classLayer}{Layer}} \&)=default
+\begin{DoxyCompactList}\small\item\em Equal operator for the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classLayer_ac55e49ac5a2cd79956232b629b463158}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
+\begin{DoxyCompactList}\small\item\em process the outputs of this layer \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLayer_a0276997801564e8207a4e47db0deb898}{get\+Nb\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Get the Nb\+Input object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLayer_a74318a5b352c69b4c404d8c48a38ba24}{get\+Nb\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Get the Nb\+Nodes object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} \mbox{\hyperlink{classLayer_a24336f87f16d53c9614ff7f7c8c59da7}{get\+Node}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classNode}{Node}} object at the position index. \end{DoxyCompactList}\item 
+activation\+Function \mbox{\hyperlink{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}{get\+Activation\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Get the Activation Function object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}\label{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}} 
+\index{Layer@{Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Layer\+::\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new empty \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+Activation function used by the nodes of this layer \mbox{\Hypertarget{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}\label{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}} 
+\index{Layer@{Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Layer\+::\+Layer (\begin{DoxyParamCaption}\item[{activation\+Function}]{function,  }\item[{int}]{nb\+Input,  }\item[{int}]{nb\+Nodes }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & \+: activation function used by the nodes of this layer \\
+\hline
+{\em nb\+Input} & \+: number of inputs in this layer \\
+\hline
+{\em nb\+Nodes} & \+: number of nodes in this layer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}\label{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}} 
+\index{Layer@{Layer}!getActivationFunction@{getActivationFunction}}
+\index{getActivationFunction@{getActivationFunction}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{getActivationFunction()}{getActivationFunction()}}
+{\footnotesize\ttfamily activation\+Function Layer\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Activation Function object. 
+
+\begin{DoxyReturn}{Returns}
+activation\+Function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a0276997801564e8207a4e47db0deb898}\label{classLayer_a0276997801564e8207a4e47db0deb898}} 
+\index{Layer@{Layer}!getNbInput@{getNbInput}}
+\index{getNbInput@{getNbInput}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{getNbInput()}{getNbInput()}}
+{\footnotesize\ttfamily int Layer\+::get\+Nb\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Nb\+Input object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a74318a5b352c69b4c404d8c48a38ba24}\label{classLayer_a74318a5b352c69b4c404d8c48a38ba24}} 
+\index{Layer@{Layer}!getNbNodes@{getNbNodes}}
+\index{getNbNodes@{getNbNodes}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{getNbNodes()}{getNbNodes()}}
+{\footnotesize\ttfamily int Layer\+::get\+Nb\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Nb\+Nodes object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a24336f87f16d53c9614ff7f7c8c59da7}\label{classLayer_a24336f87f16d53c9614ff7f7c8c59da7}} 
+\index{Layer@{Layer}!getNode@{getNode}}
+\index{getNode@{getNode}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} Layer\+::get\+Node (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classNode}{Node}} object at the position index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \+: the position of the node we want to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classNode}{Node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}\label{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}} 
+\index{Layer@{Layer}!operator=@{operator=}}
+\index{operator=@{operator=}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLayer}{Layer}}\& Layer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLayer}{Layer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Equal operator for the \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classLayer}{Layer}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_ac55e49ac5a2cd79956232b629b463158}\label{classLayer_ac55e49ac5a2cd79956232b629b463158}} 
+\index{Layer@{Layer}!processOutputs@{processOutputs}}
+\index{processOutputs@{processOutputs}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{processOutputs()}{processOutputs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Layer\+::process\+Outputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+process the outputs of this layer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \+: vector of inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$double$>$ \+: vector of outputs 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/layer.\+hpp\item 
+/home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/layer.\+cpp\end{DoxyCompactItemize}
