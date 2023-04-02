@@ -40,3 +40,7 @@ double Node::getBias() {
 int Node::getNbInput() {
     return nbInput;
 }
+
+activationFunction Node::getActivationFunction() {
+    return activationfunction;
+}

@@ -21,6 +21,7 @@ add_executable(
   ANN_test
   test.cc
   node_t.cc
+  activationFunction_t.cc
   ../src/node.cpp
   ../src/activationFunction.cpp
 )

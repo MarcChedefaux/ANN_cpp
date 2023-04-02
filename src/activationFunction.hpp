@@ -1,6 +1,8 @@
 #ifndef ACTIVATION
 #define ACTIVATION
 
+#include<cmath>
+
 /**
  * @brief Type of an activation function
  * 
@@ -46,14 +48,6 @@ double TanHyperbolic(double x);
  * @return double 
  */
 double ReLu(double x);
-
-/**
- * @brief ELU activation function
- * 
- * @param x 
- * @return double 
- */
-double ELU(double x);
 
 /**
  * @brief Leaky ReLU activation function

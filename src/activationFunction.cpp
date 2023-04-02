@@ -5,35 +5,30 @@ double Identity(double x) {
 }
 
 double BinaryStep(double x){
-    return x; //NOT IMPLEMENTED
+    return (x>=0?1:0);
 }
 
 
 double Sigmoid(double x){
-    return x; //NOT IMPLEMENTED
+    return (double)(1/(1+exp(-x)));
 }
 
 
 double TanHyperbolic(double x){
-    return x; //NOT IMPLEMENTED
+    return tanh(x);
 }
 
 
 double ReLu(double x){
-    return x; //NOT IMPLEMENTED
-}
-
-
-double ELU(double x){
-    return x; //NOT IMPLEMENTED
+    return fmax(0,x);
 }
 
 
 double LeakyReLu(double x){
-    return x; //NOT IMPLEMENTED
+    return (x>=0?x:0.1*x);
 }
 
 
 double Gaussian(double x){
-    return x; //NOT IMPLEMENTED
+    return exp(-(x*x)); 
 }

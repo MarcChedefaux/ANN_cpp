@@ -12,8 +12,11 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNode_aa52db43e5749b5b02612368d5ce25456}{Node}} (int nb\+In=0)
+\mbox{\hyperlink{classNode_a57790921c79e3197433d430bee550ead}{Node}} (activation\+Function function, int nb\+In)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNode}{Node}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\mbox{\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor for \mbox{\hyperlink{classNode}{Node}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classNode}{Node}} \& \mbox{\hyperlink{classNode_a086667ffffb3a5f9843a90c499fe90bb}{operator=}} (const \mbox{\hyperlink{classNode}{Node}} \&)=default
 \begin{DoxyCompactList}\small\item\em Equal operator for the node object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
@@ -23,7 +26,9 @@ double \mbox{\hyperlink{classNode_a17f86b25f2c6bb58712a7818f6cc046a}{get\+Weight
 double \mbox{\hyperlink{classNode_ae4f12ed53034c8cee052d19719cc9b00}{get\+Bias}} ()
 \begin{DoxyCompactList}\small\item\em Get the Bias. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classNode_aae38eb1a16438984ee4d438e9e13a7d7}{get\+Nb\+Input}} ()
-\begin{DoxyCompactList}\small\item\em Get the number of input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the number of input. \end{DoxyCompactList}\item 
+activation\+Function \mbox{\hyperlink{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}{get\+Activation\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Get the Activation Function of the \mbox{\hyperlink{classNode}{Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -32,11 +37,11 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 Class which represent the behaviour of a \mbox{\hyperlink{classNode}{Node}} in an Artificial Neural \mbox{\hyperlink{classNetwork}{Network}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classNode_aa52db43e5749b5b02612368d5ce25456}\label{classNode_aa52db43e5749b5b02612368d5ce25456}} 
+\mbox{\Hypertarget{classNode_a57790921c79e3197433d430bee550ead}\label{classNode_a57790921c79e3197433d430bee550ead}} 
 \index{Node@{Node}!Node@{Node}}
 \index{Node@{Node}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{nb\+In = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{activation\+Function}]{function,  }\item[{int}]{nb\+In }\end{DoxyParamCaption})}
 
 
 
@@ -52,6 +57,19 @@ Construct a new \mbox{\hyperlink{classNode}{Node}} object by creating random wei
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}\label{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}} 
+\index{Node@{Node}!getActivationFunction@{getActivationFunction}}
+\index{getActivationFunction@{getActivationFunction}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getActivationFunction()}{getActivationFunction()}}
+{\footnotesize\ttfamily activation\+Function Node\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Activation Function of the \mbox{\hyperlink{classNode}{Node}}. 
+
+\begin{DoxyReturn}{Returns}
+activation\+Function \+: the \mbox{\hyperlink{classNode}{Node}} Activation Function. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classNode_ae4f12ed53034c8cee052d19719cc9b00}\label{classNode_ae4f12ed53034c8cee052d19719cc9b00}} 
 \index{Node@{Node}!getBias@{getBias}}
 \index{getBias@{getBias}!Node@{Node}}
