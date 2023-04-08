@@ -2,6 +2,144 @@
 \label{classNetwork}\index{Network@{Network}}
 
 
+Class \mbox{\hyperlink{classNetwork}{Network}}.  
+
+
+
+
+{\ttfamily \#include $<$network.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetwork_af8dfc64b6e5620c7b4172c78cdbdf684}{Network}} (std\+::vector$<$ int $>$ Size, std\+::vector$<$ activation\+Function $>$ activation\+Functions)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNetwork_a7ee79f62ef08b4794409be74d8419099}{Network}} (std\+::vector$<$ int $>$ Size, activation\+Function activationfunction)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNetwork}{Network}} \& \mbox{\hyperlink{classNetwork_ac395a6c1b044a6b66538ecdf7ab55bc0}{operator=}} (const \mbox{\hyperlink{classNetwork}{Network}} \&)=default
+\begin{DoxyCompactList}\small\item\em Equal operator for the \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classNetwork_afeaf6745de6ccc743c4e3af6d5e7357f}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
+\begin{DoxyCompactList}\small\item\em Process of the network layer by layer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNetwork_ac9c6eb47145c9a45b7ced4026a4a69eb}{get\+Layer\+Size}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classLayer}{Layer}} Size object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLayer}{Layer}} \mbox{\hyperlink{classNetwork_a88278646ae66e944c1fb524894473144}{get\+Layer}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{classNetwork}{Network}}. 
+
+which implements all the behaviour of a \mbox{\hyperlink{classNetwork}{Network}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNetwork_af8dfc64b6e5620c7b4172c78cdbdf684}\label{classNetwork_af8dfc64b6e5620c7b4172c78cdbdf684}} 
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{Network()}{Network()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Network\+::\+Network (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{Size,  }\item[{std\+::vector$<$ activation\+Function $>$}]{activation\+Functions }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNetwork}{Network}} object. 
+
+Size of the differents layers
+
+
+\begin{DoxyParams}{Parameters}
+{\em Size} & \+: the differents sizes of the layers. \\
+\hline
+{\em activation\+Functions} & \+: the differents activations function used by the layers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetwork_a7ee79f62ef08b4794409be74d8419099}\label{classNetwork_a7ee79f62ef08b4794409be74d8419099}} 
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{Network()}{Network()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Network\+::\+Network (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{Size,  }\item[{activation\+Function}]{activationfunction }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNetwork}{Network}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Size} & \+: the differents sizes of the layers. \\
+\hline
+{\em activationfunction} & \+: the activation function used by all the layers. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNetwork_a88278646ae66e944c1fb524894473144}\label{classNetwork_a88278646ae66e944c1fb524894473144}} 
+\index{Network@{Network}!getLayer@{getLayer}}
+\index{getLayer@{getLayer}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getLayer()}{getLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLayer}{Layer}} Network\+::get\+Layer (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classLayer}{Layer}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_ac9c6eb47145c9a45b7ced4026a4a69eb}\label{classNetwork_ac9c6eb47145c9a45b7ced4026a4a69eb}} 
+\index{Network@{Network}!getLayerSize@{getLayerSize}}
+\index{getLayerSize@{getLayerSize}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getLayerSize()}{getLayerSize()}}
+{\footnotesize\ttfamily int Network\+::get\+Layer\+Size (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classLayer}{Layer}} Size object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_ac395a6c1b044a6b66538ecdf7ab55bc0}\label{classNetwork_ac395a6c1b044a6b66538ecdf7ab55bc0}} 
+\index{Network@{Network}!operator=@{operator=}}
+\index{operator=@{operator=}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNetwork}{Network}}\& Network\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNetwork}{Network}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Equal operator for the \mbox{\hyperlink{classNetwork}{Network}} object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classNetwork}{Network}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_afeaf6745de6ccc743c4e3af6d5e7357f}\label{classNetwork_afeaf6745de6ccc743c4e3af6d5e7357f}} 
+\index{Network@{Network}!processOutputs@{processOutputs}}
+\index{processOutputs@{processOutputs}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{processOutputs()}{processOutputs()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Network\+::process\+Outputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Process of the network layer by layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \+: vector of inputs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$double$>$ \+: vector of outputs. 
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 /home/marc/\+Documents/1. Développement/4. C++/1. Neural Network/\+ANN\+\_\+cpp/src/network.\+hpp\end{DoxyCompactItemize}
