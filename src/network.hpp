@@ -12,8 +12,15 @@
 class Network {
     private:
         std::vector<Layer> layers; /*! Layers of the network*/
+        int nbLayers; /*! Number of layers*/
         std::vector<int> layersSize; /*! Size of the differents layers */ 
     public:
+        /**
+         * @brief Construct a new empty Network object
+         * 
+         */
+        Network();
+
         /**
          * @brief Construct a new Network object
          * 
@@ -52,6 +59,13 @@ class Network {
          * @return int 
          */
         int getLayerSize(int index);
+
+        /**
+         * @brief Get the Number Layers object
+         * 
+         * @return int 
+         */
+        int getNumberLayers();
 
         /**
          * @brief Get the Layer object
