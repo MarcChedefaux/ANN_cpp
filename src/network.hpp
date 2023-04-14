@@ -3,6 +3,7 @@
 
 #include "layer.hpp"
 #include "activationFunction.hpp"
+#include <fstream>
 
 /**
  * @brief Class Network
@@ -74,6 +75,20 @@ class Network {
          * @return Layer 
          */
         Layer getLayer(int index);
+
+        /**
+         * @brief Load a network from a binary file situated on the path
+         * 
+         * @param path : path to the network .bin file
+         */
+        void LoadNetwork(std::string path);
+
+        /**
+         * @brief Save the network to a binary file situated on the path
+         * 
+         * @param path : path to the newly created .bin file
+         */
+        void SaveNetwork(std::string path);
 };
 
 #endif

@@ -44,3 +44,35 @@ int Node::getNbInput() {
 activationFunction Node::getActivationFunction() {
     return activationfunction;
 }
+
+std::ostream& write(std::ostream& out, Node& obj) {
+    //nbInput
+    out.write((char*)&obj.nbInput, sizeof(obj.nbInput));
+    //bias
+    out.write(reinterpret_cast<const char*>(&obj.bias), sizeof(obj.bias));
+    //activationfunction
+    out.write((char*)&obj.activationfunction, sizeof(obj.activationfunction));
+    //weights
+    for (int i = 0; i<obj.nbInput; i++) {
+        out.write(reinterpret_cast<const char*>(&obj.weights.at(i)), sizeof(obj.weights.at(i)));
+    }
+
+    return out;
+}
+
+std::istream& read(std::istream& in, Node& obj) {
+    obj.weights.clear();
+    obj.bias = 0;
+    obj.nbInput = 0;
+    obj.activationfunction = Identity;
+
+    in.read((char*)&obj.nbInput, sizeof(obj.nbInput));
+    in.read(reinterpret_cast<char*>(&obj.bias), sizeof(obj.bias));
+    in.read((char*)&obj.activationfunction, sizeof(obj.activationfunction));
+    for (int i=0; i<obj.nbInput; i++) {
+        double newWeight;
+        in.read(reinterpret_cast<char*>(&newWeight), sizeof(newWeight));
+        obj.weights.emplace_back(newWeight);
+    }
+    return in;
+}

@@ -5,6 +5,7 @@
 #include <vector>
 #include <random>
 #include <stdexcept>
+#include <iostream>
 /**
  * @brief Class Node.
  * 
@@ -78,6 +79,24 @@ class Node {
          * @return activationFunction : the Node Activation Function.
          */
         activationFunction getActivationFunction();
+
+        /**
+         * @brief Overload of the write function for the node object
+         * 
+         * @param out 
+         * @param obj 
+         * @return std::ostream& 
+         */
+        friend std::ostream& write(std::ostream& out, Node& obj);
+
+        /**
+         * @brief Overload of the read function for the node object
+         * 
+         * @param out 
+         * @param obj 
+         * @return std::istream& 
+         */
+        friend std::istream& read(std::istream& out, Node& obj);
 
 };
 

@@ -27,7 +27,11 @@ int \mbox{\hyperlink{classNetwork_ac9c6eb47145c9a45b7ced4026a4a69eb}{get\+Layer\
 int \mbox{\hyperlink{classNetwork_a51c85c5e0d292963a22abc92f54b3748}{get\+Number\+Layers}} ()
 \begin{DoxyCompactList}\small\item\em Get the Number Layers object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLayer}{Layer}} \mbox{\hyperlink{classNetwork_a88278646ae66e944c1fb524894473144}{get\+Layer}} (int index)
-\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_ac6f15b1f04d99f3a70a19080d7ae9e13}{Load\+Network}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Load a network from a binary file situated on the path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_a196fe5a8ad840a08190cf62fdb82d19e}{Save\+Network}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Save the network to a binary file situated on the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -132,6 +136,21 @@ Get the Number Layers object.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_ac6f15b1f04d99f3a70a19080d7ae9e13}\label{classNetwork_ac6f15b1f04d99f3a70a19080d7ae9e13}} 
+\index{Network@{Network}!LoadNetwork@{LoadNetwork}}
+\index{LoadNetwork@{LoadNetwork}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{LoadNetwork()}{LoadNetwork()}}
+{\footnotesize\ttfamily void Network\+::\+Load\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Load a network from a binary file situated on the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \+: path to the network .bin file \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classNetwork_ac395a6c1b044a6b66538ecdf7ab55bc0}\label{classNetwork_ac395a6c1b044a6b66538ecdf7ab55bc0}} 
 \index{Network@{Network}!operator=@{operator=}}
 \index{operator=@{operator=}!Network@{Network}}
@@ -163,6 +182,21 @@ Process of the network layer by layer.
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$double$>$ \+: vector of outputs. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_a196fe5a8ad840a08190cf62fdb82d19e}\label{classNetwork_a196fe5a8ad840a08190cf62fdb82d19e}} 
+\index{Network@{Network}!SaveNetwork@{SaveNetwork}}
+\index{SaveNetwork@{SaveNetwork}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{SaveNetwork()}{SaveNetwork()}}
+{\footnotesize\ttfamily void Network\+::\+Save\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Save the network to a binary file situated on the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \+: path to the newly created .bin file \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

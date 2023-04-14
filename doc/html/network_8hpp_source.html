@@ -74,38 +74,45 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;layer.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;activationFunction.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classNetwork.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNetwork.html">Network</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::vector&lt;Layer&gt; layers; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> nbLayers; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::vector&lt;int&gt; layersSize; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>(std::vector&lt;int&gt; Size, std::vector&lt;activationFunction&gt; activationFunctions);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>(std::vector&lt;int&gt; Size, activationFunction activationfunction);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0">   45</a></span>&#160;        <a class="code" href="classNetwork.html">Network</a>&amp; <a class="code" href="classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classNetwork.html">Network</a>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::vector&lt;double&gt; <a class="code" href="classNetwork.html#ac6e4db6bd2d72808b8084b29b65e9a12">processOutputs</a>(std::vector&lt;double&gt; inputs);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNetwork.html#ac9c6eb47145c9a45b7ced4026a4a69eb">getLayerSize</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNetwork.html#a51c85c5e0d292963a22abc92f54b3748">getNumberLayers</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classLayer.html">Layer</a> <a class="code" href="classNetwork.html#a88278646ae66e944c1fb524894473144">getLayer</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classNetwork.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNetwork.html">Network</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        std::vector&lt;Layer&gt; layers; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> nbLayers; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::vector&lt;int&gt; layersSize; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>(std::vector&lt;int&gt; Size, std::vector&lt;activationFunction&gt; activationFunctions);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>(std::vector&lt;int&gt; Size, activationFunction activationfunction);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0">   46</a></span>&#160;        <a class="code" href="classNetwork.html">Network</a>&amp; <a class="code" href="classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classNetwork.html">Network</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::vector&lt;double&gt; <a class="code" href="classNetwork.html#ac6e4db6bd2d72808b8084b29b65e9a12">processOutputs</a>(std::vector&lt;double&gt; inputs);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNetwork.html#ac9c6eb47145c9a45b7ced4026a4a69eb">getLayerSize</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNetwork.html#a51c85c5e0d292963a22abc92f54b3748">getNumberLayers</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classLayer.html">Layer</a> <a class="code" href="classNetwork.html#a88278646ae66e944c1fb524894473144">getLayer</a>(<span class="keywordtype">int</span> index);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNetwork.html#ac6f15b1f04d99f3a70a19080d7ae9e13">LoadNetwork</a>(std::string path);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">SaveNetwork</a>(std::string path);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassLayer_html"><div class="ttname"><a href="classLayer.html">Layer</a></div><div class="ttdoc">Class Layer.</div><div class="ttdef"><b>Definition:</b> layer.hpp:14</div></div>
-<div class="ttc" id="aclassNetwork_html"><div class="ttname"><a href="classNetwork.html">Network</a></div><div class="ttdoc">Class Network.</div><div class="ttdef"><b>Definition:</b> network.hpp:12</div></div>
+<div class="ttc" id="aclassNetwork_html"><div class="ttname"><a href="classNetwork.html">Network</a></div><div class="ttdoc">Class Network.</div><div class="ttdef"><b>Definition:</b> network.hpp:13</div></div>
+<div class="ttc" id="aclassNetwork_html_a196fe5a8ad840a08190cf62fdb82d19e"><div class="ttname"><a href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">Network::SaveNetwork</a></div><div class="ttdeci">void SaveNetwork(std::string path)</div><div class="ttdoc">Save the network to a binary file situated on the path.</div><div class="ttdef"><b>Definition:</b> network.cpp:51</div></div>
 <div class="ttc" id="aclassNetwork_html_a3cc2fb4f8fa4d507077e8da85ce5a1c8"><div class="ttname"><a href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network::Network</a></div><div class="ttdeci">Network()</div><div class="ttdoc">Construct a new empty Network object.</div><div class="ttdef"><b>Definition:</b> network.cpp:3</div></div>
 <div class="ttc" id="aclassNetwork_html_a51c85c5e0d292963a22abc92f54b3748"><div class="ttname"><a href="classNetwork.html#a51c85c5e0d292963a22abc92f54b3748">Network::getNumberLayers</a></div><div class="ttdeci">int getNumberLayers()</div><div class="ttdoc">Get the Number Layers object.</div><div class="ttdef"><b>Definition:</b> network.cpp:38</div></div>
 <div class="ttc" id="aclassNetwork_html_a88278646ae66e944c1fb524894473144"><div class="ttname"><a href="classNetwork.html#a88278646ae66e944c1fb524894473144">Network::getLayer</a></div><div class="ttdeci">Layer getLayer(int index)</div><div class="ttdoc">Get the Layer object.</div><div class="ttdef"><b>Definition:</b> network.cpp:43</div></div>
 <div class="ttc" id="aclassNetwork_html_ac395a6c1b044a6b66538ecdf7ab55bc0"><div class="ttname"><a href="classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0">Network::operator=</a></div><div class="ttdeci">Network &amp; operator=(const Network &amp;)=default</div><div class="ttdoc">Equal operator for the Network object.</div></div>
 <div class="ttc" id="aclassNetwork_html_ac6e4db6bd2d72808b8084b29b65e9a12"><div class="ttname"><a href="classNetwork.html#ac6e4db6bd2d72808b8084b29b65e9a12">Network::processOutputs</a></div><div class="ttdeci">std::vector&lt; double &gt; processOutputs(std::vector&lt; double &gt; inputs)</div><div class="ttdoc">Process of the network layer by layer.</div><div class="ttdef"><b>Definition:</b> network.cpp:26</div></div>
+<div class="ttc" id="aclassNetwork_html_ac6f15b1f04d99f3a70a19080d7ae9e13"><div class="ttname"><a href="classNetwork.html#ac6f15b1f04d99f3a70a19080d7ae9e13">Network::LoadNetwork</a></div><div class="ttdeci">void LoadNetwork(std::string path)</div><div class="ttdoc">Load a network from a binary file situated on the path.</div><div class="ttdef"><b>Definition:</b> network.cpp:47</div></div>
 <div class="ttc" id="aclassNetwork_html_ac9c6eb47145c9a45b7ced4026a4a69eb"><div class="ttname"><a href="classNetwork.html#ac9c6eb47145c9a45b7ced4026a4a69eb">Network::getLayerSize</a></div><div class="ttdeci">int getLayerSize(int index)</div><div class="ttdoc">Get the Layer Size object.</div><div class="ttdef"><b>Definition:</b> network.cpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

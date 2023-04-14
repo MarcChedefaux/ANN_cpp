@@ -100,6 +100,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88278646ae66e944c1fb524894473144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a88278646ae66e944c1fb524894473144">getLayer</a> (int index)</td></tr>
 <tr class="memdesc:a88278646ae66e944c1fb524894473144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classNetwork.html#a88278646ae66e944c1fb524894473144">More...</a><br /></td></tr>
 <tr class="separator:a88278646ae66e944c1fb524894473144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f15b1f04d99f3a70a19080d7ae9e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ac6f15b1f04d99f3a70a19080d7ae9e13">LoadNetwork</a> (std::string path)</td></tr>
+<tr class="memdesc:ac6f15b1f04d99f3a70a19080d7ae9e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a network from a binary file situated on the path.  <a href="classNetwork.html#ac6f15b1f04d99f3a70a19080d7ae9e13">More...</a><br /></td></tr>
+<tr class="separator:ac6f15b1f04d99f3a70a19080d7ae9e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196fe5a8ad840a08190cf62fdb82d19e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">SaveNetwork</a> (std::string path)</td></tr>
+<tr class="memdesc:a196fe5a8ad840a08190cf62fdb82d19e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the network to a binary file situated on the path.  <a href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">More...</a><br /></td></tr>
+<tr class="separator:a196fe5a8ad840a08190cf62fdb82d19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classNetwork.html" title="Class Network.">Network</a>. </p>
@@ -274,6 +280,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac6f15b1f04d99f3a70a19080d7ae9e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f15b1f04d99f3a70a19080d7ae9e13">&#9670;&nbsp;</a></span>LoadNetwork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::LoadNetwork </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a network from a binary file situated on the path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>: path to the network .bin file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac395a6c1b044a6b66538ecdf7ab55bc0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac395a6c1b044a6b66538ecdf7ab55bc0">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -327,6 +359,32 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;double&gt; : vector of outputs. </dd></dl>
+
+</div>
+</div>
+<a id="a196fe5a8ad840a08190cf62fdb82d19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196fe5a8ad840a08190cf62fdb82d19e">&#9670;&nbsp;</a></span>SaveNetwork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::SaveNetwork </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save the network to a binary file situated on the path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>: path to the newly created .bin file </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

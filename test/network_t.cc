@@ -23,6 +23,19 @@ namespace {
                 
             }
 
+            void testSaveLoad(Network n) {
+                n.SaveNetwork("./n1.bin");
+
+                Network newN;
+                newN.LoadNetwork("./n1.bin");
+
+                EXPECT_EQ(newN.getNumberLayers(), n.getNumberLayers());
+
+                for (int i=0; i<n.getNumberLayers()+1; i++) {
+                    EXPECT_EQ(newN.getLayerSize(i), n.getLayerSize(i));
+                }
+            }
+
             void testNbLayers(Network n, int expected) {
                 EXPECT_EQ(n.getNumberLayers(), expected);
             } 
@@ -46,6 +59,11 @@ namespace {
 
             Network n1, n2;
     };
+
+    TEST_F(NetworkTest, SaveLoadModel) {
+        testSaveLoad(n1);
+        //testSaveLoad(n2);
+    }
 
     TEST_F(NetworkTest, LayersNumber) {
         testNbLayers(n1, 4);

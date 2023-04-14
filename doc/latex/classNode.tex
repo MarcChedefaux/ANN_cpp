@@ -29,6 +29,13 @@ int \mbox{\hyperlink{classNode_aae38eb1a16438984ee4d438e9e13a7d7}{get\+Nb\+Input
 \begin{DoxyCompactList}\small\item\em Get the number of input. \end{DoxyCompactList}\item 
 activation\+Function \mbox{\hyperlink{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}{get\+Activation\+Function}} ()
 \begin{DoxyCompactList}\small\item\em Get the Activation Function of the \mbox{\hyperlink{classNode}{Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classNode_ae69ae75be3a8cc3472775334035f64be}{write}} (std\+::ostream \&out, \mbox{\hyperlink{classNode}{Node}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the write function for the node object. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classNode_aaa36dc0ef9250935fe29e395a5055d5e}{read}} (std\+::istream \&out, \mbox{\hyperlink{classNode}{Node}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the read function for the node object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -146,6 +153,49 @@ Method which realise the calculation of the ouput by doing the dot product of th
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 double \+: the state of the node after the calculation. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classNode_aaa36dc0ef9250935fe29e395a5055d5e}\label{classNode_aaa36dc0ef9250935fe29e395a5055d5e}} 
+\index{Node@{Node}!read@{read}}
+\index{read@{read}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily std\+::istream\& read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{out,  }\item[{\mbox{\hyperlink{classNode}{Node}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the read function for the node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_ae69ae75be3a8cc3472775334035f64be}\label{classNode_ae69ae75be3a8cc3472775334035f64be}} 
+\index{Node@{Node}!write@{write}}
+\index{write@{write}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily std\+::ostream\& write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classNode}{Node}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the write function for the node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
 \end{DoxyReturn}
 
 

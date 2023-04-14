@@ -43,3 +43,11 @@ int Network::getNumberLayers() {
 Layer Network::getLayer(int index) {
     return layers.at(index);
 }
+
+void Network::LoadNetwork(std::string path) {
+    
+}
+
+void Network::SaveNetwork(std::string path) {
+
+}
