@@ -2,6 +2,7 @@
 #include "activationFunction.hpp"
 #include <vector>
 #include <gtest/gtest.h>
+#include <fstream>
 
 namespace {
     class NodeTest : public ::testing::Test {
@@ -34,6 +35,33 @@ namespace {
                 ASSERT_EQ(newN.getNbInput(), n.getNbInput());
                 
                 ASSERT_EQ(newN.getBias(), n.getBias());
+
+                ASSERT_EQ(newN.getActivationFunction(), n.getActivationFunction());
+
+                for (int i=0; i < n.getNbInput(); i++) {
+                    if (i <= newN.getNbInput()) {
+                        EXPECT_EQ(n.getWeight(i), newN.getWeight(i));
+                    }
+                }
+            }
+
+            void testSaveLoad(Node n) {
+                std::ofstream file;
+                file.open("./test/build/nodeTest.bin", std::ios::trunc | std::ios::binary);
+                write(file, n);
+                file.close();
+
+                Node newN;
+                std::ifstream infile;
+                infile.open("./test/build/nodeTest.bin", std::ios::in | std::ios::binary);
+                read(infile, newN);
+                infile.close();
+
+                ASSERT_EQ(newN.getNbInput(), n.getNbInput());
+                
+                ASSERT_EQ(newN.getBias(), n.getBias());
+
+                ASSERT_EQ(newN.getActivationFunction(), n.getActivationFunction());
 
                 for (int i=0; i < n.getNbInput(); i++) {
                     if (i <= newN.getNbInput()) {
@@ -109,6 +137,23 @@ namespace {
         TestCopyConstructor(nL2);
         TestCopyConstructor(nG1);
         TestCopyConstructor(nG2);
+    }
+
+    TEST_F(NodeTest, SaveAndLoad) {
+        testSaveLoad(nI1);
+        testSaveLoad(nI2);
+        testSaveLoad(nB1);
+        testSaveLoad(nB2);
+        testSaveLoad(nS1);
+        testSaveLoad(nS2);
+        testSaveLoad(nT1);
+        testSaveLoad(nT2);
+        testSaveLoad(nR1);
+        testSaveLoad(nR2);
+        testSaveLoad(nL1);
+        testSaveLoad(nL2);
+        testSaveLoad(nG1);
+        testSaveLoad(nG2);
     }
 
     TEST_F(NodeTest, IdentityProcessOutputs0) {
