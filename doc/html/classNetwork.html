@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classNetwork-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Network Class Reference</div>  </div>
@@ -106,6 +107,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a196fe5a8ad840a08190cf62fdb82d19e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">SaveNetwork</a> (std::string path)</td></tr>
 <tr class="memdesc:a196fe5a8ad840a08190cf62fdb82d19e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the network to a binary file situated on the path.  <a href="classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e">More...</a><br /></td></tr>
 <tr class="separator:a196fe5a8ad840a08190cf62fdb82d19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:af48743c8515f44fa0dc1c3c4c99cd913"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#af48743c8515f44fa0dc1c3c4c99cd913">write</a> (std::ostream &amp;out, <a class="el" href="classNetwork.html">Network</a> &amp;obj)</td></tr>
+<tr class="memdesc:af48743c8515f44fa0dc1c3c4c99cd913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the write function for the <a class="el" href="classNetwork.html" title="Class Network.">Network</a> object.  <a href="classNetwork.html#af48743c8515f44fa0dc1c3c4c99cd913">More...</a><br /></td></tr>
+<tr class="separator:af48743c8515f44fa0dc1c3c4c99cd913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d86abfcc8c978ed46e862dc6762cc9"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ac0d86abfcc8c978ed46e862dc6762cc9">read</a> (std::istream &amp;in, <a class="el" href="classNetwork.html">Network</a> &amp;obj)</td></tr>
+<tr class="memdesc:ac0d86abfcc8c978ed46e862dc6762cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the read function for the <a class="el" href="classNetwork.html" title="Class Network.">Network</a> object.  <a href="classNetwork.html#ac0d86abfcc8c978ed46e862dc6762cc9">More...</a><br /></td></tr>
+<tr class="separator:ac0d86abfcc8c978ed46e862dc6762cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classNetwork.html" title="Class Network.">Network</a>. </p>
@@ -385,6 +395,99 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ac0d86abfcc8c978ed46e862dc6762cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d86abfcc8c978ed46e862dc6762cc9">&#9670;&nbsp;</a></span>read</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classNetwork.html">Network</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the read function for the <a class="el" href="classNetwork.html" title="Class Network.">Network</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td></td></tr>
+    <tr><td class="paramname">obj</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::istream&amp; </dd></dl>
+
+</div>
+</div>
+<a id="af48743c8515f44fa0dc1c3c4c99cd913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48743c8515f44fa0dc1c3c4c99cd913">&#9670;&nbsp;</a></span>write</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classNetwork.html">Network</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the write function for the <a class="el" href="classNetwork.html" title="Class Network.">Network</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td></td></tr>
+    <tr><td class="paramname">obj</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
 
 </div>
 </div>

@@ -32,6 +32,13 @@ void \mbox{\hyperlink{classNetwork_ac6f15b1f04d99f3a70a19080d7ae9e13}{Load\+Netw
 \begin{DoxyCompactList}\small\item\em Load a network from a binary file situated on the path. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classNetwork_a196fe5a8ad840a08190cf62fdb82d19e}{Save\+Network}} (std\+::string path)
 \begin{DoxyCompactList}\small\item\em Save the network to a binary file situated on the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classNetwork_af48743c8515f44fa0dc1c3c4c99cd913}{write}} (std\+::ostream \&out, \mbox{\hyperlink{classNetwork}{Network}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the write function for the \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classNetwork_ac0d86abfcc8c978ed46e862dc6762cc9}{read}} (std\+::istream \&in, \mbox{\hyperlink{classNetwork}{Network}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the read function for the \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -197,6 +204,49 @@ Save the network to a binary file situated on the path.
 {\em path} & \+: path to the newly created .bin file \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classNetwork_ac0d86abfcc8c978ed46e862dc6762cc9}\label{classNetwork_ac0d86abfcc8c978ed46e862dc6762cc9}} 
+\index{Network@{Network}!read@{read}}
+\index{read@{read}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily std\+::istream\& read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{classNetwork}{Network}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the read function for the \mbox{\hyperlink{classNetwork}{Network}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetwork_af48743c8515f44fa0dc1c3c4c99cd913}\label{classNetwork_af48743c8515f44fa0dc1c3c4c99cd913}} 
+\index{Network@{Network}!write@{write}}
+\index{write@{write}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily std\+::ostream\& write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classNetwork}{Network}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the write function for the \mbox{\hyperlink{classNetwork}{Network}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
