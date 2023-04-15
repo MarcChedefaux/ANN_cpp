@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['savenetwork_16',['SaveNetwork',['../classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e',1,'Network']]]
+  ['read_16',['read',['../classLayer.html#af044b4952a8934a597cc21a05c4d1562',1,'Layer::read()'],['../classNode.html#acbc9a87aa1b21e7e365f820d9268605a',1,'Node::read()']]]
 ];

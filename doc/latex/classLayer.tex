@@ -14,7 +14,7 @@ Class \mbox{\hyperlink{classLayer}{Layer}}.
 \item 
 \mbox{\hyperlink{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}{Layer}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new empty \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}{Layer}} (activation\+Function function, int nb\+Input, int nb\+Nodes)
+\mbox{\hyperlink{classLayer_a495135771cebd2a071e5db147e1f4650}{Layer}} (\mbox{\hyperlink{structactivation}{activation}} function, int nb\+Input, int nb\+Nodes)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLayer}{Layer}} \& \mbox{\hyperlink{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}{operator=}} (const \mbox{\hyperlink{classLayer}{Layer}} \&)=default
 \begin{DoxyCompactList}\small\item\em Equal operator for the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
@@ -26,8 +26,15 @@ int \mbox{\hyperlink{classLayer_a74318a5b352c69b4c404d8c48a38ba24}{get\+Nb\+Node
 \begin{DoxyCompactList}\small\item\em Get the Nb\+Nodes object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classNode}{Node}} \mbox{\hyperlink{classLayer_a24336f87f16d53c9614ff7f7c8c59da7}{get\+Node}} (int index)
 \begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classNode}{Node}} object at the position index. \end{DoxyCompactList}\item 
-activation\+Function \mbox{\hyperlink{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}{get\+Activation\+Function}} ()
+\mbox{\hyperlink{structactivation}{activation}} \mbox{\hyperlink{classLayer_a193f1760252cf4e1b688dc03a443e13f}{get\+Activation\+Function}} ()
 \begin{DoxyCompactList}\small\item\em Get the Activation Function object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classLayer_a09f89bbe84e89606351eb26efe14d829}{write}} (std\+::ostream \&out, \mbox{\hyperlink{classLayer}{Layer}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the write function for the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classLayer_af044b4952a8934a597cc21a05c4d1562}{read}} (std\+::istream \&in, \mbox{\hyperlink{classLayer}{Layer}} \&obj)
+\begin{DoxyCompactList}\small\item\em Overload of the read function for the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,11 +53,11 @@ which implements all the behaviour of a layer
 
 Construct a new empty \mbox{\hyperlink{classLayer}{Layer}} object. 
 
-Activation function used by the nodes of this layer \mbox{\Hypertarget{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}\label{classLayer_acdbbc823fe5266d0ab85ad9a94264dd2}} 
+Activation function used by the nodes of this layer \mbox{\Hypertarget{classLayer_a495135771cebd2a071e5db147e1f4650}\label{classLayer_a495135771cebd2a071e5db147e1f4650}} 
 \index{Layer@{Layer}!Layer@{Layer}}
 \index{Layer@{Layer}!Layer@{Layer}}
 \doxysubsubsection{\texorpdfstring{Layer()}{Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Layer\+::\+Layer (\begin{DoxyParamCaption}\item[{activation\+Function}]{function,  }\item[{int}]{nb\+Input,  }\item[{int}]{nb\+Nodes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Layer\+::\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structactivation}{activation}}}]{function,  }\item[{int}]{nb\+Input,  }\item[{int}]{nb\+Nodes }\end{DoxyParamCaption})}
 
 
 
@@ -68,18 +75,18 @@ Construct a new \mbox{\hyperlink{classLayer}{Layer}} object.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}\label{classLayer_a7189ed4f0e3a9cb474b5ba5c1cf5de37}} 
+\mbox{\Hypertarget{classLayer_a193f1760252cf4e1b688dc03a443e13f}\label{classLayer_a193f1760252cf4e1b688dc03a443e13f}} 
 \index{Layer@{Layer}!getActivationFunction@{getActivationFunction}}
 \index{getActivationFunction@{getActivationFunction}!Layer@{Layer}}
 \doxysubsubsection{\texorpdfstring{getActivationFunction()}{getActivationFunction()}}
-{\footnotesize\ttfamily activation\+Function Layer\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structactivation}{activation}} Layer\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Get the Activation Function object. 
 
 \begin{DoxyReturn}{Returns}
-activation\+Function 
+activation 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classLayer_a0276997801564e8207a4e47db0deb898}\label{classLayer_a0276997801564e8207a4e47db0deb898}} 
 \index{Layer@{Layer}!getNbInput@{getNbInput}}
@@ -155,6 +162,49 @@ process the outputs of this layer
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$double$>$ \+: vector of outputs 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classLayer_af044b4952a8934a597cc21a05c4d1562}\label{classLayer_af044b4952a8934a597cc21a05c4d1562}} 
+\index{Layer@{Layer}!read@{read}}
+\index{read@{read}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily std\+::istream\& read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{classLayer}{Layer}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the read function for the \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a09f89bbe84e89606351eb26efe14d829}\label{classLayer_a09f89bbe84e89606351eb26efe14d829}} 
+\index{Layer@{Layer}!write@{write}}
+\index{write@{write}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily std\+::ostream\& write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classLayer}{Layer}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of the write function for the \mbox{\hyperlink{classLayer}{Layer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
 \end{DoxyReturn}
 
 

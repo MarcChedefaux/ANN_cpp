@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_17',['write',['../classNode.html#ae69ae75be3a8cc3472775334035f64be',1,'Node']]]
+  ['savenetwork_17',['SaveNetwork',['../classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e',1,'Network']]]
 ];

@@ -12,7 +12,7 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNode_a57790921c79e3197433d430bee550ead}{Node}} (activation\+Function function, int nb\+In)
+\mbox{\hyperlink{classNode_ab3a5ec61f482f88d7b0f4ba252ee7d64}{Node}} (\mbox{\hyperlink{structactivation}{activation}} function, int nb\+In)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNode}{Node}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f}} 
 \mbox{\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
@@ -27,14 +27,14 @@ double \mbox{\hyperlink{classNode_ae4f12ed53034c8cee052d19719cc9b00}{get\+Bias}}
 \begin{DoxyCompactList}\small\item\em Get the Bias. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classNode_aae38eb1a16438984ee4d438e9e13a7d7}{get\+Nb\+Input}} ()
 \begin{DoxyCompactList}\small\item\em Get the number of input. \end{DoxyCompactList}\item 
-activation\+Function \mbox{\hyperlink{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}{get\+Activation\+Function}} ()
+\mbox{\hyperlink{structactivation}{activation}} \mbox{\hyperlink{classNode_aefe38df7721fc29f7d266d6bf8b44ac5}{get\+Activation\+Function}} ()
 \begin{DoxyCompactList}\small\item\em Get the Activation Function of the \mbox{\hyperlink{classNode}{Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classNode_ae69ae75be3a8cc3472775334035f64be}{write}} (std\+::ostream \&out, \mbox{\hyperlink{classNode}{Node}} \&obj)
 \begin{DoxyCompactList}\small\item\em Overload of the write function for the node object. \end{DoxyCompactList}\item 
-std\+::istream \& \mbox{\hyperlink{classNode_aaa36dc0ef9250935fe29e395a5055d5e}{read}} (std\+::istream \&out, \mbox{\hyperlink{classNode}{Node}} \&obj)
+std\+::istream \& \mbox{\hyperlink{classNode_acbc9a87aa1b21e7e365f820d9268605a}{read}} (std\+::istream \&in, \mbox{\hyperlink{classNode}{Node}} \&obj)
 \begin{DoxyCompactList}\small\item\em Overload of the read function for the node object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -44,11 +44,11 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 Class which represent the behaviour of a \mbox{\hyperlink{classNode}{Node}} in an Artificial Neural \mbox{\hyperlink{classNetwork}{Network}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classNode_a57790921c79e3197433d430bee550ead}\label{classNode_a57790921c79e3197433d430bee550ead}} 
+\mbox{\Hypertarget{classNode_ab3a5ec61f482f88d7b0f4ba252ee7d64}\label{classNode_ab3a5ec61f482f88d7b0f4ba252ee7d64}} 
 \index{Node@{Node}!Node@{Node}}
 \index{Node@{Node}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{activation\+Function}]{function,  }\item[{int}]{nb\+In }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structactivation}{activation}}}]{function,  }\item[{int}]{nb\+In }\end{DoxyParamCaption})}
 
 
 
@@ -64,18 +64,18 @@ Construct a new \mbox{\hyperlink{classNode}{Node}} object by creating random wei
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}\label{classNode_a0fb6c639c62b4b8e50d3404c10e92b2d}} 
+\mbox{\Hypertarget{classNode_aefe38df7721fc29f7d266d6bf8b44ac5}\label{classNode_aefe38df7721fc29f7d266d6bf8b44ac5}} 
 \index{Node@{Node}!getActivationFunction@{getActivationFunction}}
 \index{getActivationFunction@{getActivationFunction}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{getActivationFunction()}{getActivationFunction()}}
-{\footnotesize\ttfamily activation\+Function Node\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structactivation}{activation}} Node\+::get\+Activation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Get the Activation Function of the \mbox{\hyperlink{classNode}{Node}}. 
 
 \begin{DoxyReturn}{Returns}
-activation\+Function \+: the \mbox{\hyperlink{classNode}{Node}} Activation Function. 
+activation \+: the \mbox{\hyperlink{classNode}{Node}} Activation Function. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classNode_ae4f12ed53034c8cee052d19719cc9b00}\label{classNode_ae4f12ed53034c8cee052d19719cc9b00}} 
 \index{Node@{Node}!getBias@{getBias}}
@@ -157,11 +157,11 @@ double \+: the state of the node after the calculation.
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classNode_aaa36dc0ef9250935fe29e395a5055d5e}\label{classNode_aaa36dc0ef9250935fe29e395a5055d5e}} 
+\mbox{\Hypertarget{classNode_acbc9a87aa1b21e7e365f820d9268605a}\label{classNode_acbc9a87aa1b21e7e365f820d9268605a}} 
 \index{Node@{Node}!read@{read}}
 \index{read@{read}!Node@{Node}}
 \doxysubsubsection{\texorpdfstring{read}{read}}
-{\footnotesize\ttfamily std\+::istream\& read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{out,  }\item[{\mbox{\hyperlink{classNode}{Node}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily std\+::istream\& read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{classNode}{Node}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -169,7 +169,7 @@ Overload of the read function for the node object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em out} & \\
+{\em in} & \\
 \hline
 {\em obj} & \\
 \hline

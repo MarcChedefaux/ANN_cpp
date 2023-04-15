@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['network_32',['Network',['../classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8',1,'Network::Network()'],['../classNetwork.html#af8dfc64b6e5620c7b4172c78cdbdf684',1,'Network::Network(std::vector&lt; int &gt; Size, std::vector&lt; activationFunction &gt; activationFunctions)'],['../classNetwork.html#a7ee79f62ef08b4794409be74d8419099',1,'Network::Network(std::vector&lt; int &gt; Size, activationFunction activationfunction)']]],
-  ['node_33',['Node',['../classNode.html#a57790921c79e3197433d430bee550ead',1,'Node::Node(activationFunction function, int nbIn)'],['../classNode.html#ad7a34779cad45d997bfd6d3d8043c75f',1,'Node::Node()']]]
+  ['network_34',['Network',['../classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8',1,'Network::Network()'],['../classNetwork.html#aefb39182a6489dd740540940af288d36',1,'Network::Network(std::vector&lt; int &gt; Size, std::vector&lt; activation &gt; activationFunctions)'],['../classNetwork.html#ab7727b58db79d10a82cfa4fae9588279',1,'Network::Network(std::vector&lt; int &gt; Size, activation activationfunction)']]],
+  ['node_35',['Node',['../classNode.html#ab3a5ec61f482f88d7b0f4ba252ee7d64',1,'Node::Node(activation function, int nbIn)'],['../classNode.html#ad7a34779cad45d997bfd6d3d8043c75f',1,'Node::Node()']]]
 ];

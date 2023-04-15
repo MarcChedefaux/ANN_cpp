@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read_37',['read',['../classNode.html#aaa36dc0ef9250935fe29e395a5055d5e',1,'Node']]]
+  ['read_39',['read',['../classLayer.html#af044b4952a8934a597cc21a05c4d1562',1,'Layer::read()'],['../classNode.html#acbc9a87aa1b21e7e365f820d9268605a',1,'Node::read()']]]
 ];

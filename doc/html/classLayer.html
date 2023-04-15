@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classLayer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Layer Class Reference</div>  </div>
@@ -79,9 +80,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f623c7c4737dc29ecc86978d243ac6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Layer</a> ()</td></tr>
 <tr class="memdesc:a8f623c7c4737dc29ecc86978d243ac6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new empty <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">More...</a><br /></td></tr>
 <tr class="separator:a8f623c7c4737dc29ecc86978d243ac6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdbbc823fe5266d0ab85ad9a94264dd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#acdbbc823fe5266d0ab85ad9a94264dd2">Layer</a> (activationFunction function, int nbInput, int nbNodes)</td></tr>
-<tr class="memdesc:acdbbc823fe5266d0ab85ad9a94264dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#acdbbc823fe5266d0ab85ad9a94264dd2">More...</a><br /></td></tr>
-<tr class="separator:acdbbc823fe5266d0ab85ad9a94264dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495135771cebd2a071e5db147e1f4650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a495135771cebd2a071e5db147e1f4650">Layer</a> (<a class="el" href="structactivation.html">activation</a> function, int nbInput, int nbNodes)</td></tr>
+<tr class="memdesc:a495135771cebd2a071e5db147e1f4650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#a495135771cebd2a071e5db147e1f4650">More...</a><br /></td></tr>
+<tr class="separator:a495135771cebd2a071e5db147e1f4650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bca6ae0850e82fc2ca1198330489a4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d">operator=</a> (const <a class="el" href="classLayer.html">Layer</a> &amp;)=default</td></tr>
 <tr class="memdesc:a3bca6ae0850e82fc2ca1198330489a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equal operator for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d">More...</a><br /></td></tr>
 <tr class="separator:a3bca6ae0850e82fc2ca1198330489a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,9 +98,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24336f87f16d53c9614ff7f7c8c59da7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a24336f87f16d53c9614ff7f7c8c59da7">getNode</a> (int index)</td></tr>
 <tr class="memdesc:a24336f87f16d53c9614ff7f7c8c59da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classNode.html" title="Class Node.">Node</a> object at the position index.  <a href="classLayer.html#a24336f87f16d53c9614ff7f7c8c59da7">More...</a><br /></td></tr>
 <tr class="separator:a24336f87f16d53c9614ff7f7c8c59da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7189ed4f0e3a9cb474b5ba5c1cf5de37"><td class="memItemLeft" align="right" valign="top">activationFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a7189ed4f0e3a9cb474b5ba5c1cf5de37">getActivationFunction</a> ()</td></tr>
-<tr class="memdesc:a7189ed4f0e3a9cb474b5ba5c1cf5de37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Activation Function object.  <a href="classLayer.html#a7189ed4f0e3a9cb474b5ba5c1cf5de37">More...</a><br /></td></tr>
-<tr class="separator:a7189ed4f0e3a9cb474b5ba5c1cf5de37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193f1760252cf4e1b688dc03a443e13f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structactivation.html">activation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a193f1760252cf4e1b688dc03a443e13f">getActivationFunction</a> ()</td></tr>
+<tr class="memdesc:a193f1760252cf4e1b688dc03a443e13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Activation Function object.  <a href="classLayer.html#a193f1760252cf4e1b688dc03a443e13f">More...</a><br /></td></tr>
+<tr class="separator:a193f1760252cf4e1b688dc03a443e13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a09f89bbe84e89606351eb26efe14d829"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a09f89bbe84e89606351eb26efe14d829">write</a> (std::ostream &amp;out, <a class="el" href="classLayer.html">Layer</a> &amp;obj)</td></tr>
+<tr class="memdesc:a09f89bbe84e89606351eb26efe14d829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the write function for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#a09f89bbe84e89606351eb26efe14d829">More...</a><br /></td></tr>
+<tr class="separator:a09f89bbe84e89606351eb26efe14d829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af044b4952a8934a597cc21a05c4d1562"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#af044b4952a8934a597cc21a05c4d1562">read</a> (std::istream &amp;in, <a class="el" href="classLayer.html">Layer</a> &amp;obj)</td></tr>
+<tr class="memdesc:af044b4952a8934a597cc21a05c4d1562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the read function for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object.  <a href="classLayer.html#af044b4952a8934a597cc21a05c4d1562">More...</a><br /></td></tr>
+<tr class="separator:af044b4952a8934a597cc21a05c4d1562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classLayer.html" title="Class Layer.">Layer</a>. </p>
@@ -125,8 +135,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acdbbc823fe5266d0ab85ad9a94264dd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdbbc823fe5266d0ab85ad9a94264dd2">&#9670;&nbsp;</a></span>Layer() <span class="overload">[2/2]</span></h2>
+<a id="a495135771cebd2a071e5db147e1f4650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495135771cebd2a071e5db147e1f4650">&#9670;&nbsp;</a></span>Layer() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +144,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Layer::Layer </td>
           <td>(</td>
-          <td class="paramtype">activationFunction&#160;</td>
+          <td class="paramtype"><a class="el" href="structactivation.html">activation</a>&#160;</td>
           <td class="paramname"><em>function</em>, </td>
         </tr>
         <tr>
@@ -170,14 +180,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7189ed4f0e3a9cb474b5ba5c1cf5de37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7189ed4f0e3a9cb474b5ba5c1cf5de37">&#9670;&nbsp;</a></span>getActivationFunction()</h2>
+<a id="a193f1760252cf4e1b688dc03a443e13f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193f1760252cf4e1b688dc03a443e13f">&#9670;&nbsp;</a></span>getActivationFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">activationFunction Layer::getActivationFunction </td>
+          <td class="memname"><a class="el" href="structactivation.html">activation</a> Layer::getActivationFunction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -186,7 +196,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the Activation Function object. </p>
-<dl class="section return"><dt>Returns</dt><dd>activationFunction </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>activation </dd></dl>
 
 </div>
 </div>
@@ -310,6 +320,99 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;double&gt; : vector of outputs </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="af044b4952a8934a597cc21a05c4d1562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af044b4952a8934a597cc21a05c4d1562">&#9670;&nbsp;</a></span>read</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLayer.html">Layer</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the read function for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td></td></tr>
+    <tr><td class="paramname">obj</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::istream&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a09f89bbe84e89606351eb26efe14d829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09f89bbe84e89606351eb26efe14d829">&#9670;&nbsp;</a></span>write</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLayer.html">Layer</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the write function for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td></td></tr>
+    <tr><td class="paramname">obj</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
 
 </div>
 </div>
