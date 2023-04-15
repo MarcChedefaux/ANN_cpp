@@ -1,6 +1,6 @@
 #include "node.hpp"
 
-Node::Node(activationFunction function, int nbIn) {
+Node::Node(activation function, int nbIn) {
     nbInput = nbIn;
     activationfunction = function;
     bias =  200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
@@ -23,7 +23,7 @@ double Node::processOutputs(std::vector<double> inputs) {
         res += weights.at(i) * inputs.at(i);
     }
     res += bias;
-    return activationfunction(res);
+    return activationfunction.function(res);
 }
 
 double Node::getWeight(int index) {
@@ -41,7 +41,7 @@ int Node::getNbInput() {
     return nbInput;
 }
 
-activationFunction Node::getActivationFunction() {
+activation Node::getActivationFunction() {
     return activationfunction;
 }
 
@@ -51,7 +51,7 @@ std::ostream& write(std::ostream& out, Node& obj) {
     //bias
     out.write(reinterpret_cast<const char*>(&obj.bias), sizeof(obj.bias));
     //activationfunction
-    out.write((char*)&obj.activationfunction, sizeof(obj.activationfunction));
+    out.write((char*)&obj.activationfunction.index, sizeof(obj.activationfunction.index));
     //weights
     for (int i = 0; i<obj.nbInput; i++) {
         out.write(reinterpret_cast<const char*>(&obj.weights.at(i)), sizeof(obj.weights.at(i)));
@@ -64,11 +64,13 @@ std::istream& read(std::istream& in, Node& obj) {
     obj.weights.clear();
     obj.bias = 0;
     obj.nbInput = 0;
-    obj.activationfunction = Identity;
+    obj.activationfunction = identity;
 
     in.read((char*)&obj.nbInput, sizeof(obj.nbInput));
     in.read(reinterpret_cast<char*>(&obj.bias), sizeof(obj.bias));
-    in.read((char*)&obj.activationfunction, sizeof(obj.activationfunction));
+    int activationIndex;
+    in.read((char*)&activationIndex, sizeof(activationIndex));
+    obj.activationfunction = ArrayOfActivation.at(activationIndex);
     for (int i=0; i<obj.nbInput; i++) {
         double newWeight;
         in.read(reinterpret_cast<char*>(&newWeight), sizeof(newWeight));

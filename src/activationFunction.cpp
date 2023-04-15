@@ -1,5 +1,15 @@
 #include "activationFunction.hpp"
 
+activation identity = {Identity, 0};
+activation binarystep = {BinaryStep, 1};
+activation sigmoid = {Sigmoid, 2};
+activation tanhyperbolic = {TanHyperbolic, 3};
+activation relu = {ReLu, 4};
+activation leakyrelu = {LeakyReLu, 5};
+activation gaussian = {Gaussian, 6};
+
+std::vector<activation> ArrayOfActivation = {identity, binarystep, sigmoid, tanhyperbolic, relu, leakyrelu, gaussian};
+
 double Identity(double x) {
     return x;
 }
@@ -31,4 +41,8 @@ double LeakyReLu(double x){
 
 double Gaussian(double x){
     return exp(-(x*x)); 
+}
+
+void setupActivation() {
+    
 }

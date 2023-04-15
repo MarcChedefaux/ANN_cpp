@@ -16,7 +16,7 @@ class Layer {
         int nbInput; /*! Number of inputs in this layer*/
         int nbNodes; /*! Number of nodes in this layer*/
         std::vector<Node> nodes; /*! Array of all nodes*/
-        activationFunction activationfunction; /*! Activation function used by the nodes of this layer*/
+        activation activationfunction; /*! Activation function used by the nodes of this layer*/
     public :
         /**
          * @brief Construct a new empty Layer object
@@ -31,7 +31,7 @@ class Layer {
          * @param nbInput : number of inputs in this layer
          * @param nbNodes : number of nodes in this layer
          */
-        Layer(activationFunction function, int nbInput, int nbNodes);
+        Layer(activation function, int nbInput, int nbNodes);
 
         /**
          * @brief Equal operator for the Layer object
@@ -73,9 +73,28 @@ class Layer {
         /**
          * @brief Get the Activation Function object
          * 
-         * @return activationFunction 
+         * @return activation
          */
-        activationFunction getActivationFunction();
+        activation getActivationFunction();
+
+        /**
+         * @brief Overload of the write function for the Layer object
+         * 
+         * @param out 
+         * @param obj 
+         * @return std::ostream& 
+         */
+        friend std::ostream& write(std::ostream& out, Layer& obj);
+
+        /**
+         * @brief Overload of the read function for the Layer object
+         * 
+         * @param in 
+         * @param obj 
+         * @return std::istream& 
+         */
+        friend std::istream& read(std::istream& in, Layer& obj);
+
 };
 
 #endif

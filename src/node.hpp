@@ -15,7 +15,7 @@ class Node {
     private:
         int nbInput; /*! number of input of the node */
         double bias; /*! Node bias */
-        activationFunction activationfunction; /*! Node activation function*/
+        activation activationfunction; /*! Node activation function*/
         std::vector<double> weights;
     public:
 
@@ -26,7 +26,7 @@ class Node {
          * 
          * @param nbIn corresponds to the number of inputs of the created Node.
          */
-        Node(activationFunction function, int nbIn);
+        Node(activation function, int nbIn);
 
         /**
          * @brief Empty constructor for Node object
@@ -76,9 +76,9 @@ class Node {
         /**
          * @brief Get the Activation Function of the Node
          * 
-         * @return activationFunction : the Node Activation Function.
+         * @return activation : the Node Activation Function.
          */
-        activationFunction getActivationFunction();
+        activation getActivationFunction();
 
         /**
          * @brief Overload of the write function for the node object
@@ -92,11 +92,11 @@ class Node {
         /**
          * @brief Overload of the read function for the node object
          * 
-         * @param out 
+         * @param in 
          * @param obj 
          * @return std::istream& 
          */
-        friend std::istream& read(std::istream& out, Node& obj);
+        friend std::istream& read(std::istream& in, Node& obj);
 
 };
 

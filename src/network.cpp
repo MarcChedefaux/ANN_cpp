@@ -5,7 +5,7 @@ Network::Network() {
     nbLayers = 0;
 }
 
-Network::Network(std::vector<int> Size, std::vector<activationFunction> activationFunctions){
+Network::Network(std::vector<int> Size, std::vector<activation> activationFunctions){
     layersSize = Size;
     nbLayers = Size.size() - 1;
     for (int i = 0; i<nbLayers; i++) {
@@ -14,7 +14,7 @@ Network::Network(std::vector<int> Size, std::vector<activationFunction> activati
     }
 }
 
-Network::Network(std::vector<int> Size, activationFunction activationfunction) {
+Network::Network(std::vector<int> Size, activation activationfunction) {
     layersSize = Size;
     nbLayers = Size.size() - 1;
     for (int i = 0; i<nbLayers; i++) {

@@ -28,7 +28,7 @@ class Network {
          * @param Size : the differents sizes of the layers.
          * @param activationFunctions : the differents activations function used by the layers.
          */
-        Network(std::vector<int> Size, std::vector<activationFunction> activationFunctions);
+        Network(std::vector<int> Size, std::vector<activation> activationFunctions);
 
         /**
          * @brief Construct a new Network object
@@ -36,7 +36,7 @@ class Network {
          * @param Size : the differents sizes of the layers.
          * @param activationfunction : the activation function used by all the layers.
          */
-        Network(std::vector<int> Size, activationFunction activationfunction);
+        Network(std::vector<int> Size, activation activationfunction);
 
         /**
          * @brief Equal operator for the Network object
