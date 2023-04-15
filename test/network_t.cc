@@ -24,10 +24,10 @@ namespace {
             }
 
             void testSaveLoad(Network n) {
-                n.SaveNetwork("./n1.bin");
+                n.SaveNetwork("./test/build/net.bin");
 
                 Network newN;
-                newN.LoadNetwork("./n1.bin");
+                newN.LoadNetwork("./test/build/net.bin");
 
                 EXPECT_EQ(newN.getNumberLayers(), n.getNumberLayers());
 
@@ -62,7 +62,7 @@ namespace {
 
     TEST_F(NetworkTest, SaveLoadModel) {
         testSaveLoad(n1);
-        //testSaveLoad(n2);
+        testSaveLoad(n2);
     }
 
     TEST_F(NetworkTest, LayersNumber) {

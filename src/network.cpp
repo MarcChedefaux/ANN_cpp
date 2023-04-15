@@ -45,19 +45,52 @@ Layer Network::getLayer(int index) {
 }
 
 std::ostream& write(std::ostream& out, Network& obj){
+    //nbLayers
+    out.write((char*)&obj.nbLayers, sizeof(obj.nbLayers));
+    //layersSize
+    for (int i=0; i<obj.nbLayers+1; i++) {
+        out.write((char*)&obj.layersSize.at(i), sizeof(obj.layersSize.at(i)));
+    }
+    //layers
+    for (int i=0; i<obj.nbLayers; i++) {
+        write(out, obj.layers.at(i));
+    }
 
     return out;
 }
 
 std::istream& read(std::istream& in, Network& obj) {
+    obj.layers.clear();
+    obj.nbLayers = 0;
+    obj.layersSize.clear();
+
+    in.read((char*)&obj.nbLayers, sizeof(obj.nbLayers));
+    for (int i=0; i<obj.nbLayers+1; i++) {
+        int newSize;
+        in.read((char*)&newSize, sizeof(newSize));
+        obj.layersSize.emplace_back(newSize);
+    }
+
+    for (int i=0; i<obj.nbLayers; i++) {
+        Layer newL;
+        read(in, newL);
+        obj.layers.emplace_back(newL);
+    }
 
     return in;
 }
 
 void Network::LoadNetwork(std::string path) {
-    
+    std::ifstream file;
+    file.open(path, std::ios::in | std::ios::binary);
+    read(file, *this);
+    file.close();
+
 }
 
 void Network::SaveNetwork(std::string path) {
-
+    std::ofstream file;
+    file.open(path, std::ios::trunc | std::ios::binary);
+    write(file, *this);
+    file.close();
 }

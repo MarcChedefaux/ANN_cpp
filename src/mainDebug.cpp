@@ -23,44 +23,55 @@ void printLayer(Layer l) {
     std::cout << "nbNodes : " << l.getNbNodes() << std::endl;
     std::cout << "activation function : " << l.getActivationFunction().index << std::endl;
     for (int i=0; i<l.getNbNodes(); i++) {
-        std::cout << "Node " << i << std::endl;
-        printNode(l.getNode(i));
+        //std::cout << "Node " << i << std::endl;
+        //printNode(l.getNode(i));
     }
     std::cout << "--------" << std::endl;
+}
+
+void printNetwork(Network n) {
+    std::cout << "---Network---" << std::endl;
+    std::cout << "nbLayer : " << n.getNumberLayers() << std::endl;
+    std::cout << "Layers size : ";
+    for (int i=0; i<n.getNumberLayers()+1; i++) {
+        std::cout << n.getLayerSize(i) << " / ";
+    } 
+    std::cout << std::endl;
+    for (int i=0; i<n.getNumberLayers(); i++){
+        std::cout << "Layer " << i << std::endl;
+        printLayer(n.getLayer(i));
+    }
 }
 
 int main() {
     bool save = false;
 
     if (save) {
-        Layer layer(sigmoid,2,10);
-        printLayer(layer);
+        std::vector<int> size = {2,4,5,9,10};
+        std::vector<activation> act = {identity, gaussian, binarystep, sigmoid};
+        Network net(size, act);
+
+        printNetwork(net);
         std::cout << std::endl << std::endl;
         std::vector<double> input = {1,3};
-        std::vector<double> output = layer.processOutputs(input);
+        std::vector<double> output = net.processOutputs(input);
 
         for (int i=0; i<output.size(); i++) {
             std::cout << output.at(i) << std::endl;
         }
 
-        std::ofstream file;
-        file.open("layer.bin", std::ios::trunc | std::ios::binary);
-        write(file, layer);
-        file.close();
+        net.SaveNetwork("net.bin");
 
     }
     else {
-        Layer layer;
-        std::ifstream file;
-        file.open("layer.bin", std::ios::in | std::ios::binary);
-        read(file, layer);
-        file.close();
+        Network net;
+        net.LoadNetwork("net.bin");
 
 
-        printLayer(layer);
+        printNetwork(net);
         std::cout << std::endl << std::endl;
         std::vector<double> input = {1,3};
-        std::vector<double> output = layer.processOutputs(input);
+        std::vector<double> output = net.processOutputs(input);
 
         for (int i=0; i<output.size(); i++) {
             std::cout << output.at(i) << std::endl;
