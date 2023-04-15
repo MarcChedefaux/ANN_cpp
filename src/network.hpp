@@ -77,6 +77,24 @@ class Network {
         Layer getLayer(int index);
 
         /**
+         * @brief Overload of the write function for the Network object
+         * 
+         * @param out 
+         * @param obj 
+         * @return std::ostream& 
+         */
+        friend std::ostream& write(std::ostream& out, Network& obj);
+
+        /**
+         * @brief Overload of the read function for the Network object
+         * 
+         * @param in 
+         * @param obj 
+         * @return std::istream& 
+         */
+        friend std::istream& read(std::istream& in, Network& obj);
+
+        /**
          * @brief Load a network from a binary file situated on the path
          * 
          * @param path : path to the network .bin file

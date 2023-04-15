@@ -10,6 +10,10 @@
  */
 typedef double (*activationFunction)(double args);
 
+/**
+ * @brief Type of the activation with its index to find it back from serialization.
+ * 
+ */
 typedef struct {
     activationFunction function;
     int index;
@@ -71,8 +75,6 @@ double LeakyReLu(double x);
  * @return double 
  */
 double Gaussian(double x);
-
-void setupActivation();
 
 extern activation identity;
 extern activation binarystep;

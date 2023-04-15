@@ -42,7 +42,3 @@ double LeakyReLu(double x){
 double Gaussian(double x){
     return exp(-(x*x)); 
 }
-
-void setupActivation() {
-    
-}

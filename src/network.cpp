@@ -44,6 +44,16 @@ Layer Network::getLayer(int index) {
     return layers.at(index);
 }
 
+std::ostream& write(std::ostream& out, Network& obj){
+
+    return out;
+}
+
+std::istream& read(std::istream& in, Network& obj) {
+
+    return in;
+}
+
 void Network::LoadNetwork(std::string path) {
     
 }

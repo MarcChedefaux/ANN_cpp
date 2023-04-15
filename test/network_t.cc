@@ -13,10 +13,10 @@ namespace {
             virtual void SetUp() {
                 std::vector<int> size1 = {10, 100, 200, 100, 10};
                 std::vector<int> size2 = {10, 1000, 10000, 10000, 1000, 10};
-                std::vector<activationFunction> af1 = {Sigmoid, ReLu, TanHyperbolic, Gaussian};
+                std::vector<activation> af1 = {sigmoid, relu, tanhyperbolic, gaussian};
 
                 n1 = Network(size1, af1);
-                n2 = Network(size2, BinaryStep);
+                n2 = Network(size2, binarystep);
             }
 
             virtual void TearDown() {

@@ -9,20 +9,20 @@ namespace {
         protected:
 
             virtual void SetUp() {
-                nI1 = Node(Identity,10);
-                nI2 = Node(Identity,100);
-                nB1 = Node(BinaryStep,10);
-                nB2 = Node(BinaryStep,100);
-                nS1 = Node(Sigmoid,10);
-                nS2 = Node(Sigmoid,100);
-                nT1 = Node(TanHyperbolic,10);
-                nT2 = Node(TanHyperbolic,100);
-                nR1 = Node(ReLu,10);
-                nR2 = Node(ReLu,100);
-                nL1 = Node(LeakyReLu,10);
-                nL2 = Node(LeakyReLu,100);
-                nG1 = Node(Gaussian,10);
-                nG2 = Node(Gaussian,100);
+                nI1 = Node(identity,10);
+                nI2 = Node(identity,100);
+                nB1 = Node(binarystep,10);
+                nB2 = Node(binarystep,100);
+                nS1 = Node(sigmoid,10);
+                nS2 = Node(sigmoid,100);
+                nT1 = Node(tanhyperbolic,10);
+                nT2 = Node(tanhyperbolic,100);
+                nR1 = Node(relu,10);
+                nR2 = Node(relu,100);
+                nL1 = Node(leakyrelu,10);
+                nL2 = Node(leakyrelu,100);
+                nG1 = Node(gaussian,10);
+                nG2 = Node(gaussian,100);
             }
 
             virtual void TearDown() {
@@ -36,7 +36,7 @@ namespace {
                 
                 ASSERT_EQ(newN.getBias(), n.getBias());
 
-                ASSERT_EQ(newN.getActivationFunction(), n.getActivationFunction());
+                ASSERT_EQ(newN.getActivationFunction().index, n.getActivationFunction().index);
 
                 for (int i=0; i < n.getNbInput(); i++) {
                     if (i <= newN.getNbInput()) {
@@ -61,7 +61,7 @@ namespace {
                 
                 ASSERT_EQ(newN.getBias(), n.getBias());
 
-                ASSERT_EQ(newN.getActivationFunction(), n.getActivationFunction());
+                ASSERT_EQ(newN.getActivationFunction().index, n.getActivationFunction().index);
 
                 for (int i=0; i < n.getNbInput(); i++) {
                     if (i <= newN.getNbInput()) {
@@ -76,7 +76,7 @@ namespace {
 
                 double sum = n.getBias(); 
 
-                activationFunction f = n.getActivationFunction();
+                activationFunction f = n.getActivationFunction().function;
                 EXPECT_FLOAT_EQ(f(sum), n.processOutputs(in));
             }
 
@@ -87,7 +87,7 @@ namespace {
                 double sum = n.getBias(); 
                 for (int i = 0; i<n.getNbInput(); i++) sum += 0.5 * n.getWeight(i);
 
-                activationFunction f = n.getActivationFunction();
+                activationFunction f = n.getActivationFunction().function;
                 EXPECT_FLOAT_EQ(f(sum), n.processOutputs(in));
             }
 
@@ -98,7 +98,7 @@ namespace {
                 double sum = n.getBias(); 
                 for (int i = 0; i<n.getNbInput(); i++) sum += n.getWeight(i);
                 
-                activationFunction f = n.getActivationFunction();
+                activationFunction f = n.getActivationFunction().function;
                 EXPECT_FLOAT_EQ(f(sum), n.processOutputs(in));
             }
 

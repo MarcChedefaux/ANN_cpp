@@ -30,7 +30,6 @@ void printLayer(Layer l) {
 }
 
 int main() {
-    //setupActivation();
     bool save = false;
 
     if (save) {
@@ -67,15 +66,5 @@ int main() {
             std::cout << output.at(i) << std::endl;
         }
     }
-    
-    
-    //printLayer(layer);
-    
-    
-    
-
-    /*
-    
-    */
     
 }
