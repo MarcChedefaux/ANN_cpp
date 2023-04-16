@@ -4,6 +4,7 @@
 #include <vector>
 #include "node.hpp"
 #include "activationFunction.hpp"
+#include "parameter.hpp"
 
 /**
  * @brief Class Layer
@@ -47,6 +48,38 @@ class Layer {
          * @return std::vector<double>  : vector of outputs
          */
         std::vector<double> processOutputs(std::vector<double> inputs);
+
+        /**
+         * @brief Method to process the error if the layer is the output layer
+         * 
+         * @param inputs 
+         * @param outputs 
+         * @param desiredOutputs 
+         */
+        void initError(std::vector<double> inputs, std::vector<double> outputs, std::vector<double> desiredOutputs);
+
+        /**
+         * @brief Method to process the error of this layer
+         * 
+         * @param inputs 
+         * @param nextLayer
+         */
+        void processError(std::vector<double> inputs, Layer nextLayer);
+
+        /**
+         * @brief Apply all the gradients to update the weights of all the nodes
+         * 
+         * @param inputs 
+         */
+        void ApplyAllGradient(std::vector<double> inputs);
+
+        /**
+         * @brief Get the sum of Weighted Error for the input node index
+         * 
+         * @param index 
+         * @return double 
+         */
+        double getSumOfWeightedError(int index);
 
         /**
          * @brief Get the NbInput object

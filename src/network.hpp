@@ -3,7 +3,10 @@
 
 #include "layer.hpp"
 #include "activationFunction.hpp"
+#include "parameter.hpp"
+#include "dataset.hpp"
 #include <fstream>
+#include <iostream>
 
 /**
  * @brief Class Network
@@ -52,6 +55,13 @@ class Network {
          * @return std::vector<double> : vector of outputs.
          */
         std::vector<double> processOutputs(std::vector<double> inputs);
+
+        /**
+         * @brief Process the training of the model on the selected dataset
+         * 
+         * @param ds
+         */
+        void train(dataset ds);
 
         /**
          * @brief Get the Layer Size object

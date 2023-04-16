@@ -31,6 +31,37 @@ std::vector<double> Network::processOutputs(std::vector<double> inputs){
     return res;
 }
 
+void Network::train(dataset ds) {
+    std::cout << "--- Training ---" << std::endl;
+    data trainData = ds.train;
+    for (int epoch = 1; epoch <= NMAX_EPOCH; epoch++) {
+        std::cout << "Epoch " << epoch << std::endl;
+
+        for (int line = 0; line < trainData.dataCount; line++) {
+            std::vector<std::vector<double>> intermediateInputs;
+            intermediateInputs.emplace_back(trainData.inputs.at(line));
+
+            // Forward propagation
+            for (int i=0; i<nbLayers; i++) {
+                std::vector<double> res;
+                res = layers.at(i).processOutputs(intermediateInputs.at(i));
+                intermediateInputs.emplace_back(res);
+            }
+
+            //backward propagation
+            layers.at(nbLayers-1).initError(intermediateInputs.at(nbLayers-1), intermediateInputs.at(nbLayers), trainData.outputs.at(line));
+            for(int i = nbLayers-2; i >= 0; i--) {
+                layers.at(i).processError(intermediateInputs.at(i),layers.at(i+1));
+            }
+
+            // apply gradients
+            for (int i = 0; i < nbLayers; i++) {
+                layers.at(i).ApplyAllGradient(intermediateInputs.at(i));
+            }
+        }
+    }
+}
+
 int Network::getLayerSize(int index) {
     return layersSize.at(index);
 }

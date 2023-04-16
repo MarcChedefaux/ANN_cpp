@@ -2,6 +2,7 @@
 #define NODE
 
 #include "activationFunction.hpp"
+#include "parameter.hpp"
 #include <vector>
 #include <random>
 #include <stdexcept>
@@ -16,6 +17,7 @@ class Node {
         int nbInput; /*! number of input of the node */
         double bias; /*! Node bias */
         activation activationfunction; /*! Node activation function*/
+        double error = 0; /*! Error used for the backpropagation*/
         std::vector<double> weights;
     public:
 
@@ -50,6 +52,38 @@ class Node {
          * @return double : the state of the node after the calculation.
          */
         double processOutputs(std::vector<double> inputs);
+
+        /**
+         * @brief Method to process the error if the node is situated on the output layer
+         * 
+         * @param input
+         * @param output 
+         * @param desiredOutput 
+         */
+        void initError(std::vector<double> inputs, double output, double desiredOutput);
+
+        /**
+         * @brief Method to process the error using the backpropagation method
+         * 
+         * @param input
+         * @param sumOfWeightedError 
+         */
+        void processError(std::vector<double> inputs, double sumOfWeightedError);
+
+        /**
+         * @brief Get the weighted error that we'll use for the backpropagation
+         * 
+         * @param index 
+         * @return double 
+         */
+        double getWeightedError(int index);
+
+        /**
+         * @brief Apply Gradients calculated by the backpropagation
+         * 
+         * @param inputs : the inputs of the node.
+         */
+        void applyGradient(std::vector<double> inputs);
 
         /**
          * @brief Get one of the weight.

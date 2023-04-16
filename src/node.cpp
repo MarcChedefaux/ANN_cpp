@@ -26,6 +26,36 @@ double Node::processOutputs(std::vector<double> inputs) {
     return activationfunction.function(res);
 }
 
+void Node::initError(std::vector<double> inputs, double output, double desiredOutput) {
+    double res = 0;
+    for (int i = 0; i<nbInput; i++) {
+        res += weights.at(i) * inputs.at(i);
+    }
+    res += bias;
+
+    error = activationfunction.derivative(res) * (output - desiredOutput);
+}
+
+void Node::processError(std::vector<double> inputs, double sumOfWeightedError) {
+    double res = 0;
+    for (int i = 0; i<nbInput; i++) {
+        res += weights.at(i) * inputs.at(i);
+    }
+    res += bias;
+
+    error = activationfunction.derivative(res) * sumOfWeightedError;
+}
+
+void Node::applyGradient(std::vector<double> inputs) {
+    for (int i = 0; i<nbInput; i++) {
+        weights.at(i) = weights.at(i) - LEARNING_RATE * error *  inputs.at(i);
+    }
+}
+
+double Node::getWeightedError(int index) {
+    return weights.at(index) * error;
+}
+
 double Node::getWeight(int index) {
     if (index < 0 || index > nbInput) {
         throw std::invalid_argument("index out of weight vector");

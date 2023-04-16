@@ -23,6 +23,33 @@ std::vector<double> Layer::processOutputs(std::vector<double> inputs) {
     return result;
 }
 
+void Layer::initError(std::vector<double> inputs, std::vector<double> outputs, std::vector<double> desiredOutputs) {
+    for (int i = 0; i < nbNodes; i++) {
+        nodes.at(i).initError(inputs, outputs.at(i), desiredOutputs.at(i));
+    }
+}
+
+void Layer::processError(std::vector<double> inputs, Layer nextLayer) {
+    for (int i = 0; i < nbNodes; i++) {
+        double sum = nextLayer.getSumOfWeightedError(i);
+        nodes.at(i).processError(inputs, sum);
+    }
+}
+
+void Layer::ApplyAllGradient(std::vector<double> inputs) {
+    for (int i = 0; i < nbNodes; i++) {
+        nodes.at(i).applyGradient(inputs);
+    }
+}
+
+double Layer::getSumOfWeightedError(int index) {
+    double sum = 0;
+    for (int i = 0; i < nbNodes; i++) {
+        sum += nodes.at(i).getWeightedError(index);
+    }
+    return sum;
+}
+
 int Layer::getNbInput() {
     return nbInput;
 }
