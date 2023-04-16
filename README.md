@@ -16,7 +16,10 @@ The goal is to create the network object and to make it train on data. For this,
 
 ## Documentation
 
-The documentation is available in the doc folder. It is generated thanks to Doxygen.
+The documentation is available in the doc folder. It is generated thanks to Doxygen. To compile the documentation, run the following command
+```bash
+  make doc
+```
 
 
 ## Running Tests
