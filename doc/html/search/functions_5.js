@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['savenetwork_38',['SaveNetwork',['../classNetwork.html#a196fe5a8ad840a08190cf62fdb82d19e',1,'Network']]]
+  ['operator_3d_52',['operator=',['../classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d',1,'Layer::operator=()'],['../classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0',1,'Network::operator=()'],['../classNode.html#a086667ffffb3a5f9843a90c499fe90bb',1,'Node::operator=()']]]
 ];

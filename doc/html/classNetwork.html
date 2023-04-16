@@ -92,6 +92,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6e4db6bd2d72808b8084b29b65e9a12"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ac6e4db6bd2d72808b8084b29b65e9a12">processOutputs</a> (std::vector&lt; double &gt; inputs)</td></tr>
 <tr class="memdesc:ac6e4db6bd2d72808b8084b29b65e9a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process of the network layer by layer.  <a href="classNetwork.html#ac6e4db6bd2d72808b8084b29b65e9a12">More...</a><br /></td></tr>
 <tr class="separator:ac6e4db6bd2d72808b8084b29b65e9a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041c68d2ffd46cc64c222b1d921e0183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a041c68d2ffd46cc64c222b1d921e0183">train</a> (<a class="el" href="structdataset.html">dataset</a> ds)</td></tr>
+<tr class="memdesc:a041c68d2ffd46cc64c222b1d921e0183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the training of the model on the selected dataset.  <a href="classNetwork.html#a041c68d2ffd46cc64c222b1d921e0183">More...</a><br /></td></tr>
+<tr class="separator:a041c68d2ffd46cc64c222b1d921e0183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c6eb47145c9a45b7ced4026a4a69eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ac9c6eb47145c9a45b7ced4026a4a69eb">getLayerSize</a> (int index)</td></tr>
 <tr class="memdesc:ac9c6eb47145c9a45b7ced4026a4a69eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> Size object.  <a href="classNetwork.html#ac9c6eb47145c9a45b7ced4026a4a69eb">More...</a><br /></td></tr>
 <tr class="separator:ac9c6eb47145c9a45b7ced4026a4a69eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -392,6 +395,32 @@ Friends</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>: path to the newly created .bin file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a041c68d2ffd46cc64c222b1d921e0183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041c68d2ffd46cc64c222b1d921e0183">&#9670;&nbsp;</a></span>train()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::train </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdataset.html">dataset</a>&#160;</td>
+          <td class="paramname"><em>ds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process the training of the model on the selected dataset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ds</td><td></td></tr>
   </table>
   </dd>
 </dl>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['layer_20',['Layer',['../classLayer.html',1,'']]]
+  ['data_29',['data',['../structdata.html',1,'']]],
+  ['dataset_30',['dataset',['../structdataset.html',1,'']]]
 ];

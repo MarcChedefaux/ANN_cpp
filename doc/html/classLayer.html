@@ -89,6 +89,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac55e49ac5a2cd79956232b629b463158"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#ac55e49ac5a2cd79956232b629b463158">processOutputs</a> (std::vector&lt; double &gt; inputs)</td></tr>
 <tr class="memdesc:ac55e49ac5a2cd79956232b629b463158"><td class="mdescLeft">&#160;</td><td class="mdescRight">process the outputs of this layer  <a href="classLayer.html#ac55e49ac5a2cd79956232b629b463158">More...</a><br /></td></tr>
 <tr class="separator:ac55e49ac5a2cd79956232b629b463158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffd7b718450e63d6547216e894be0a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#abffd7b718450e63d6547216e894be0a6">initError</a> (std::vector&lt; double &gt; inputs, std::vector&lt; double &gt; outputs, std::vector&lt; double &gt; desiredOutputs)</td></tr>
+<tr class="memdesc:abffd7b718450e63d6547216e894be0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to process the error if the layer is the output layer.  <a href="classLayer.html#abffd7b718450e63d6547216e894be0a6">More...</a><br /></td></tr>
+<tr class="separator:abffd7b718450e63d6547216e894be0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f402439a6402753b5e142ac403ee58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a31f402439a6402753b5e142ac403ee58">processError</a> (std::vector&lt; double &gt; inputs, <a class="el" href="classLayer.html">Layer</a> nextLayer)</td></tr>
+<tr class="memdesc:a31f402439a6402753b5e142ac403ee58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to process the error of this layer.  <a href="classLayer.html#a31f402439a6402753b5e142ac403ee58">More...</a><br /></td></tr>
+<tr class="separator:a31f402439a6402753b5e142ac403ee58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb1c17bf36df3f82d8fc53662d5307f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a4eb1c17bf36df3f82d8fc53662d5307f">ApplyAllGradient</a> (std::vector&lt; double &gt; inputs)</td></tr>
+<tr class="memdesc:a4eb1c17bf36df3f82d8fc53662d5307f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply all the gradients to update the weights of all the nodes.  <a href="classLayer.html#a4eb1c17bf36df3f82d8fc53662d5307f">More...</a><br /></td></tr>
+<tr class="separator:a4eb1c17bf36df3f82d8fc53662d5307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e67d5b0738cabeb20b05ece5c0046c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a5e67d5b0738cabeb20b05ece5c0046c4">getSumOfWeightedError</a> (int index)</td></tr>
+<tr class="memdesc:a5e67d5b0738cabeb20b05ece5c0046c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sum of Weighted Error for the input node index.  <a href="classLayer.html#a5e67d5b0738cabeb20b05ece5c0046c4">More...</a><br /></td></tr>
+<tr class="separator:a5e67d5b0738cabeb20b05ece5c0046c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0276997801564e8207a4e47db0deb898"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a0276997801564e8207a4e47db0deb898">getNbInput</a> ()</td></tr>
 <tr class="memdesc:a0276997801564e8207a4e47db0deb898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the NbInput object.  <a href="classLayer.html#a0276997801564e8207a4e47db0deb898">More...</a><br /></td></tr>
 <tr class="separator:a0276997801564e8207a4e47db0deb898"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,6 +192,32 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4eb1c17bf36df3f82d8fc53662d5307f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb1c17bf36df3f82d8fc53662d5307f">&#9670;&nbsp;</a></span>ApplyAllGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Layer::ApplyAllGradient </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>inputs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply all the gradients to update the weights of all the nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a193f1760252cf4e1b688dc03a443e13f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a193f1760252cf4e1b688dc03a443e13f">&#9670;&nbsp;</a></span>getActivationFunction()</h2>
 
@@ -267,6 +305,77 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a5e67d5b0738cabeb20b05ece5c0046c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e67d5b0738cabeb20b05ece5c0046c4">&#9670;&nbsp;</a></span>getSumOfWeightedError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Layer::getSumOfWeightedError </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the sum of Weighted Error for the input node index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+</div>
+</div>
+<a id="abffd7b718450e63d6547216e894be0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffd7b718450e63d6547216e894be0a6">&#9670;&nbsp;</a></span>initError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Layer::initError </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>outputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>desiredOutputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to process the error if the layer is the output layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputs</td><td></td></tr>
+    <tr><td class="paramname">outputs</td><td></td></tr>
+    <tr><td class="paramname">desiredOutputs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3bca6ae0850e82fc2ca1198330489a4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bca6ae0850e82fc2ca1198330489a4d">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -293,6 +402,43 @@ Friends</h2></td></tr>
 
 <p>Equal operator for the <a class="el" href="classLayer.html" title="Class Layer.">Layer</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classLayer.html" title="Class Layer.">Layer</a>&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a31f402439a6402753b5e142ac403ee58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f402439a6402753b5e142ac403ee58">&#9670;&nbsp;</a></span>processError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Layer::processError </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLayer.html">Layer</a>&#160;</td>
+          <td class="paramname"><em>nextLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to process the error of this layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputs</td><td></td></tr>
+    <tr><td class="paramname">nextLayer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

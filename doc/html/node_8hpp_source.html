@@ -73,51 +73,65 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NODE</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;activationFunction.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classNode.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNode.html">Node</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> nbInput; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">double</span> bias; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="structactivation.html">activation</a> activationfunction; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::vector&lt;double&gt; weights;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a>(<a class="code" href="structactivation.html">activation</a> <span class="keyword">function</span>, <span class="keywordtype">int</span> nbIn);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classNode.html#a086667ffffb3a5f9843a90c499fe90bb">   42</a></span>&#160;        <a class="code" href="classNode.html">Node</a>&amp; <a class="code" href="classNode.html#a086667ffffb3a5f9843a90c499fe90bb">operator=</a>(<span class="keyword">const</span> <a class="code" href="classNode.html">Node</a>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#a7f58cd29496f1a8f1f2b4277a38ce899">processOutputs</a>(std::vector&lt;double&gt; inputs);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">getWeight</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">getBias</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">getNbInput</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="structactivation.html">activation</a> <a class="code" href="classNode.html#aefe38df7721fc29f7d266d6bf8b44ac5">getActivationFunction</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classNode.html#ae69ae75be3a8cc3472775334035f64be">write</a>(std::ostream&amp; out, <a class="code" href="classNode.html">Node</a>&amp; obj);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">friend</span> std::istream&amp; <a class="code" href="classNode.html#acbc9a87aa1b21e7e365f820d9268605a">read</a>(std::istream&amp; in, <a class="code" href="classNode.html">Node</a>&amp; obj);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;parameter.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classNode.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNode.html">Node</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> nbInput; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">double</span> bias; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="structactivation.html">activation</a> activationfunction; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">double</span> error = 0; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;double&gt; weights;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a>(<a class="code" href="structactivation.html">activation</a> <span class="keyword">function</span>, <span class="keywordtype">int</span> nbIn);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classNode.html#a086667ffffb3a5f9843a90c499fe90bb">   44</a></span>&#160;        <a class="code" href="classNode.html">Node</a>&amp; <a class="code" href="classNode.html#a086667ffffb3a5f9843a90c499fe90bb">operator=</a>(<span class="keyword">const</span> <a class="code" href="classNode.html">Node</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#a7f58cd29496f1a8f1f2b4277a38ce899">processOutputs</a>(std::vector&lt;double&gt; inputs);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNode.html#ad713ca899a353936b7c4bfaf9383a914">initError</a>(std::vector&lt;double&gt; inputs, <span class="keywordtype">double</span> output, <span class="keywordtype">double</span> desiredOutput);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNode.html#a4551129637077687ff7616e8e42e1e19">processError</a>(std::vector&lt;double&gt; inputs, <span class="keywordtype">double</span> sumOfWeightedError);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#a29208bc7b3907d95cd5a28047ec5e5c7">getWeightedError</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNode.html#a2404d620c68a746f5e4f3c5b5349ac21">applyGradient</a>(std::vector&lt;double&gt; inputs);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">getWeight</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">getBias</a>();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">Class Node.</div><div class="ttdef"><b>Definition:</b> node.hpp:14</div></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">getNbInput</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="structactivation.html">activation</a> <a class="code" href="classNode.html#aefe38df7721fc29f7d266d6bf8b44ac5">getActivationFunction</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classNode.html#ae69ae75be3a8cc3472775334035f64be">write</a>(std::ostream&amp; out, <a class="code" href="classNode.html">Node</a>&amp; obj);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">friend</span> std::istream&amp; <a class="code" href="classNode.html#acbc9a87aa1b21e7e365f820d9268605a">read</a>(std::istream&amp; in, <a class="code" href="classNode.html">Node</a>&amp; obj);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">Class Node.</div><div class="ttdef"><b>Definition:</b> node.hpp:15</div></div>
 <div class="ttc" id="aclassNode_html_a086667ffffb3a5f9843a90c499fe90bb"><div class="ttname"><a href="classNode.html#a086667ffffb3a5f9843a90c499fe90bb">Node::operator=</a></div><div class="ttdeci">Node &amp; operator=(const Node &amp;)=default</div><div class="ttdoc">Equal operator for the node object.</div></div>
-<div class="ttc" id="aclassNode_html_a17f86b25f2c6bb58712a7818f6cc046a"><div class="ttname"><a href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">Node::getWeight</a></div><div class="ttdeci">double getWeight(int index)</div><div class="ttdoc">Get one of the weight.</div><div class="ttdef"><b>Definition:</b> node.cpp:29</div></div>
+<div class="ttc" id="aclassNode_html_a17f86b25f2c6bb58712a7818f6cc046a"><div class="ttname"><a href="classNode.html#a17f86b25f2c6bb58712a7818f6cc046a">Node::getWeight</a></div><div class="ttdeci">double getWeight(int index)</div><div class="ttdoc">Get one of the weight.</div><div class="ttdef"><b>Definition:</b> node.cpp:59</div></div>
+<div class="ttc" id="aclassNode_html_a2404d620c68a746f5e4f3c5b5349ac21"><div class="ttname"><a href="classNode.html#a2404d620c68a746f5e4f3c5b5349ac21">Node::applyGradient</a></div><div class="ttdeci">void applyGradient(std::vector&lt; double &gt; inputs)</div><div class="ttdoc">Apply Gradients calculated by the backpropagation.</div><div class="ttdef"><b>Definition:</b> node.cpp:49</div></div>
+<div class="ttc" id="aclassNode_html_a29208bc7b3907d95cd5a28047ec5e5c7"><div class="ttname"><a href="classNode.html#a29208bc7b3907d95cd5a28047ec5e5c7">Node::getWeightedError</a></div><div class="ttdeci">double getWeightedError(int index)</div><div class="ttdoc">Get the weighted error that we'll use for the backpropagation.</div><div class="ttdef"><b>Definition:</b> node.cpp:55</div></div>
+<div class="ttc" id="aclassNode_html_a4551129637077687ff7616e8e42e1e19"><div class="ttname"><a href="classNode.html#a4551129637077687ff7616e8e42e1e19">Node::processError</a></div><div class="ttdeci">void processError(std::vector&lt; double &gt; inputs, double sumOfWeightedError)</div><div class="ttdoc">Method to process the error using the backpropagation method.</div><div class="ttdef"><b>Definition:</b> node.cpp:39</div></div>
 <div class="ttc" id="aclassNode_html_a7f58cd29496f1a8f1f2b4277a38ce899"><div class="ttname"><a href="classNode.html#a7f58cd29496f1a8f1f2b4277a38ce899">Node::processOutputs</a></div><div class="ttdeci">double processOutputs(std::vector&lt; double &gt; inputs)</div><div class="ttdoc">Method to process the outputs of the node.</div><div class="ttdef"><b>Definition:</b> node.cpp:17</div></div>
-<div class="ttc" id="aclassNode_html_aae38eb1a16438984ee4d438e9e13a7d7"><div class="ttname"><a href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">Node::getNbInput</a></div><div class="ttdeci">int getNbInput()</div><div class="ttdoc">Get the number of input.</div><div class="ttdef"><b>Definition:</b> node.cpp:40</div></div>
-<div class="ttc" id="aclassNode_html_acbc9a87aa1b21e7e365f820d9268605a"><div class="ttname"><a href="classNode.html#acbc9a87aa1b21e7e365f820d9268605a">Node::read</a></div><div class="ttdeci">friend std::istream &amp; read(std::istream &amp;in, Node &amp;obj)</div><div class="ttdoc">Overload of the read function for the node object.</div><div class="ttdef"><b>Definition:</b> node.cpp:63</div></div>
+<div class="ttc" id="aclassNode_html_aae38eb1a16438984ee4d438e9e13a7d7"><div class="ttname"><a href="classNode.html#aae38eb1a16438984ee4d438e9e13a7d7">Node::getNbInput</a></div><div class="ttdeci">int getNbInput()</div><div class="ttdoc">Get the number of input.</div><div class="ttdef"><b>Definition:</b> node.cpp:70</div></div>
+<div class="ttc" id="aclassNode_html_acbc9a87aa1b21e7e365f820d9268605a"><div class="ttname"><a href="classNode.html#acbc9a87aa1b21e7e365f820d9268605a">Node::read</a></div><div class="ttdeci">friend std::istream &amp; read(std::istream &amp;in, Node &amp;obj)</div><div class="ttdoc">Overload of the read function for the node object.</div><div class="ttdef"><b>Definition:</b> node.cpp:93</div></div>
+<div class="ttc" id="aclassNode_html_ad713ca899a353936b7c4bfaf9383a914"><div class="ttname"><a href="classNode.html#ad713ca899a353936b7c4bfaf9383a914">Node::initError</a></div><div class="ttdeci">void initError(std::vector&lt; double &gt; inputs, double output, double desiredOutput)</div><div class="ttdoc">Method to process the error if the node is situated on the output layer.</div><div class="ttdef"><b>Definition:</b> node.cpp:29</div></div>
 <div class="ttc" id="aclassNode_html_ad7a34779cad45d997bfd6d3d8043c75f"><div class="ttname"><a href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node::Node</a></div><div class="ttdeci">Node()</div><div class="ttdoc">Empty constructor for Node object.</div><div class="ttdef"><b>Definition:</b> node.cpp:13</div></div>
-<div class="ttc" id="aclassNode_html_ae4f12ed53034c8cee052d19719cc9b00"><div class="ttname"><a href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">Node::getBias</a></div><div class="ttdeci">double getBias()</div><div class="ttdoc">Get the Bias.</div><div class="ttdef"><b>Definition:</b> node.cpp:36</div></div>
-<div class="ttc" id="aclassNode_html_ae69ae75be3a8cc3472775334035f64be"><div class="ttname"><a href="classNode.html#ae69ae75be3a8cc3472775334035f64be">Node::write</a></div><div class="ttdeci">friend std::ostream &amp; write(std::ostream &amp;out, Node &amp;obj)</div><div class="ttdoc">Overload of the write function for the node object.</div><div class="ttdef"><b>Definition:</b> node.cpp:48</div></div>
-<div class="ttc" id="aclassNode_html_aefe38df7721fc29f7d266d6bf8b44ac5"><div class="ttname"><a href="classNode.html#aefe38df7721fc29f7d266d6bf8b44ac5">Node::getActivationFunction</a></div><div class="ttdeci">activation getActivationFunction()</div><div class="ttdoc">Get the Activation Function of the Node.</div><div class="ttdef"><b>Definition:</b> node.cpp:44</div></div>
+<div class="ttc" id="aclassNode_html_ae4f12ed53034c8cee052d19719cc9b00"><div class="ttname"><a href="classNode.html#ae4f12ed53034c8cee052d19719cc9b00">Node::getBias</a></div><div class="ttdeci">double getBias()</div><div class="ttdoc">Get the Bias.</div><div class="ttdef"><b>Definition:</b> node.cpp:66</div></div>
+<div class="ttc" id="aclassNode_html_ae69ae75be3a8cc3472775334035f64be"><div class="ttname"><a href="classNode.html#ae69ae75be3a8cc3472775334035f64be">Node::write</a></div><div class="ttdeci">friend std::ostream &amp; write(std::ostream &amp;out, Node &amp;obj)</div><div class="ttdoc">Overload of the write function for the node object.</div><div class="ttdef"><b>Definition:</b> node.cpp:78</div></div>
+<div class="ttc" id="aclassNode_html_aefe38df7721fc29f7d266d6bf8b44ac5"><div class="ttname"><a href="classNode.html#aefe38df7721fc29f7d266d6bf8b44ac5">Node::getActivationFunction</a></div><div class="ttdeci">activation getActivationFunction()</div><div class="ttdoc">Get the Activation Function of the Node.</div><div class="ttdef"><b>Definition:</b> node.cpp:74</div></div>
 <div class="ttc" id="astructactivation_html"><div class="ttname"><a href="structactivation.html">activation</a></div><div class="ttdoc">Type of the activation with its index to find it back from serialization.</div><div class="ttdef"><b>Definition:</b> activationFunction.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

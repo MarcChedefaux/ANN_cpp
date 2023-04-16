@@ -22,6 +22,8 @@ Class \mbox{\hyperlink{classNetwork}{Network}}.
 \begin{DoxyCompactList}\small\item\em Equal operator for the \mbox{\hyperlink{classNetwork}{Network}} object. \end{DoxyCompactList}\item 
 std\+::vector$<$ double $>$ \mbox{\hyperlink{classNetwork_ac6e4db6bd2d72808b8084b29b65e9a12}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
 \begin{DoxyCompactList}\small\item\em Process of the network layer by layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_a041c68d2ffd46cc64c222b1d921e0183}{train}} (\mbox{\hyperlink{structdataset}{dataset}} ds)
+\begin{DoxyCompactList}\small\item\em Process the training of the model on the selected dataset. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classNetwork_ac9c6eb47145c9a45b7ced4026a4a69eb}{get\+Layer\+Size}} (int index)
 \begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classLayer}{Layer}} Size object. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classNetwork_a51c85c5e0d292963a22abc92f54b3748}{get\+Number\+Layers}} ()
@@ -202,6 +204,21 @@ Save the network to a binary file situated on the path.
 
 \begin{DoxyParams}{Parameters}
 {\em path} & \+: path to the newly created .bin file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetwork_a041c68d2ffd46cc64c222b1d921e0183}\label{classNetwork_a041c68d2ffd46cc64c222b1d921e0183}} 
+\index{Network@{Network}!train@{train}}
+\index{train@{train}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void Network\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdataset}{dataset}}}]{ds }\end{DoxyParamCaption})}
+
+
+
+Process the training of the model on the selected dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ds} & \\
 \hline
 \end{DoxyParams}
 

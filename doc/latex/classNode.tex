@@ -21,6 +21,14 @@ Class \mbox{\hyperlink{classNode}{Node}}.
 \begin{DoxyCompactList}\small\item\em Equal operator for the node object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
 \begin{DoxyCompactList}\small\item\em Method to process the outputs of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_ad713ca899a353936b7c4bfaf9383a914}{init\+Error}} (std\+::vector$<$ double $>$ inputs, double output, double desired\+Output)
+\begin{DoxyCompactList}\small\item\em Method to process the error if the node is situated on the output layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_a4551129637077687ff7616e8e42e1e19}{process\+Error}} (std\+::vector$<$ double $>$ inputs, double sum\+Of\+Weighted\+Error)
+\begin{DoxyCompactList}\small\item\em Method to process the error using the backpropagation method. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNode_a29208bc7b3907d95cd5a28047ec5e5c7}{get\+Weighted\+Error}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the weighted error that we\textquotesingle{}ll use for the backpropagation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_a2404d620c68a746f5e4f3c5b5349ac21}{apply\+Gradient}} (std\+::vector$<$ double $>$ inputs)
+\begin{DoxyCompactList}\small\item\em Apply Gradients calculated by the backpropagation. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classNode_a17f86b25f2c6bb58712a7818f6cc046a}{get\+Weight}} (int index)
 \begin{DoxyCompactList}\small\item\em Get one of the weight. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classNode_ae4f12ed53034c8cee052d19719cc9b00}{get\+Bias}} ()
@@ -64,6 +72,21 @@ Construct a new \mbox{\hyperlink{classNode}{Node}} object by creating random wei
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_a2404d620c68a746f5e4f3c5b5349ac21}\label{classNode_a2404d620c68a746f5e4f3c5b5349ac21}} 
+\index{Node@{Node}!applyGradient@{applyGradient}}
+\index{applyGradient@{applyGradient}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{applyGradient()}{applyGradient()}}
+{\footnotesize\ttfamily void Node\+::apply\+Gradient (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Apply Gradients calculated by the backpropagation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \+: the inputs of the node. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classNode_aefe38df7721fc29f7d266d6bf8b44ac5}\label{classNode_aefe38df7721fc29f7d266d6bf8b44ac5}} 
 \index{Node@{Node}!getActivationFunction@{getActivationFunction}}
 \index{getActivationFunction@{getActivationFunction}!Node@{Node}}
@@ -121,6 +144,43 @@ Get one of the weight.
 \begin{DoxyReturn}{Returns}
 double \+: the weight. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classNode_a29208bc7b3907d95cd5a28047ec5e5c7}\label{classNode_a29208bc7b3907d95cd5a28047ec5e5c7}} 
+\index{Node@{Node}!getWeightedError@{getWeightedError}}
+\index{getWeightedError@{getWeightedError}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getWeightedError()}{getWeightedError()}}
+{\footnotesize\ttfamily double Node\+::get\+Weighted\+Error (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the weighted error that we\textquotesingle{}ll use for the backpropagation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNode_ad713ca899a353936b7c4bfaf9383a914}\label{classNode_ad713ca899a353936b7c4bfaf9383a914}} 
+\index{Node@{Node}!initError@{initError}}
+\index{initError@{initError}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{initError()}{initError()}}
+{\footnotesize\ttfamily void Node\+::init\+Error (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs,  }\item[{double}]{output,  }\item[{double}]{desired\+Output }\end{DoxyParamCaption})}
+
+
+
+Method to process the error if the node is situated on the output layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+{\em output} & \\
+\hline
+{\em desired\+Output} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classNode_a086667ffffb3a5f9843a90c499fe90bb}\label{classNode_a086667ffffb3a5f9843a90c499fe90bb}} 
 \index{Node@{Node}!operator=@{operator=}}
 \index{operator=@{operator=}!Node@{Node}}
@@ -134,6 +194,23 @@ Equal operator for the node object.
 \begin{DoxyReturn}{Returns}
 the address \mbox{\hyperlink{classNode}{Node}} of the left sided \mbox{\hyperlink{classNode}{Node}} object. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classNode_a4551129637077687ff7616e8e42e1e19}\label{classNode_a4551129637077687ff7616e8e42e1e19}} 
+\index{Node@{Node}!processError@{processError}}
+\index{processError@{processError}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{processError()}{processError()}}
+{\footnotesize\ttfamily void Node\+::process\+Error (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs,  }\item[{double}]{sum\+Of\+Weighted\+Error }\end{DoxyParamCaption})}
+
+
+
+Method to process the error using the backpropagation method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+{\em sum\+Of\+Weighted\+Error} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}\label{classNode_a7f58cd29496f1a8f1f2b4277a38ce899}} 
 \index{Node@{Node}!processOutputs@{processOutputs}}
 \index{processOutputs@{processOutputs}!Node@{Node}}

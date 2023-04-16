@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['network_21',['Network',['../classNetwork.html',1,'']]],
-  ['node_22',['Node',['../classNode.html',1,'']]]
+  ['layer_31',['Layer',['../classLayer.html',1,'']]]
 ];

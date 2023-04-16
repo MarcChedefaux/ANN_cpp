@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read_16',['read',['../classLayer.html#af044b4952a8934a597cc21a05c4d1562',1,'Layer::read()'],['../classNetwork.html#ac0d86abfcc8c978ed46e862dc6762cc9',1,'Network::read()'],['../classNode.html#acbc9a87aa1b21e7e365f820d9268605a',1,'Node::read()']]]
+  ['operator_3d_21',['operator=',['../classLayer.html#a3bca6ae0850e82fc2ca1198330489a4d',1,'Layer::operator=()'],['../classNetwork.html#ac395a6c1b044a6b66538ecdf7ab55bc0',1,'Network::operator=()'],['../classNode.html#a086667ffffb3a5f9843a90c499fe90bb',1,'Node::operator=()']]]
 ];

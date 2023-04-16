@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_18',['write',['../classLayer.html#a09f89bbe84e89606351eb26efe14d829',1,'Layer::write()'],['../classNetwork.html#af48743c8515f44fa0dc1c3c4c99cd913',1,'Network::write()'],['../classNode.html#ae69ae75be3a8cc3472775334035f64be',1,'Node::write()']]]
+  ['read_24',['read',['../classLayer.html#af044b4952a8934a597cc21a05c4d1562',1,'Layer::read()'],['../classNetwork.html#ac0d86abfcc8c978ed46e862dc6762cc9',1,'Network::read()'],['../classNode.html#acbc9a87aa1b21e7e365f820d9268605a',1,'Node::read()']]]
 ];

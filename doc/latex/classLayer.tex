@@ -20,6 +20,14 @@ Class \mbox{\hyperlink{classLayer}{Layer}}.
 \begin{DoxyCompactList}\small\item\em Equal operator for the \mbox{\hyperlink{classLayer}{Layer}} object. \end{DoxyCompactList}\item 
 std\+::vector$<$ double $>$ \mbox{\hyperlink{classLayer_ac55e49ac5a2cd79956232b629b463158}{process\+Outputs}} (std\+::vector$<$ double $>$ inputs)
 \begin{DoxyCompactList}\small\item\em process the outputs of this layer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLayer_abffd7b718450e63d6547216e894be0a6}{init\+Error}} (std\+::vector$<$ double $>$ inputs, std\+::vector$<$ double $>$ outputs, std\+::vector$<$ double $>$ desired\+Outputs)
+\begin{DoxyCompactList}\small\item\em Method to process the error if the layer is the output layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLayer_a31f402439a6402753b5e142ac403ee58}{process\+Error}} (std\+::vector$<$ double $>$ inputs, \mbox{\hyperlink{classLayer}{Layer}} next\+Layer)
+\begin{DoxyCompactList}\small\item\em Method to process the error of this layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLayer_a4eb1c17bf36df3f82d8fc53662d5307f}{Apply\+All\+Gradient}} (std\+::vector$<$ double $>$ inputs)
+\begin{DoxyCompactList}\small\item\em Apply all the gradients to update the weights of all the nodes. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classLayer_a5e67d5b0738cabeb20b05ece5c0046c4}{get\+Sum\+Of\+Weighted\+Error}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the sum of Weighted Error for the input node index. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classLayer_a0276997801564e8207a4e47db0deb898}{get\+Nb\+Input}} ()
 \begin{DoxyCompactList}\small\item\em Get the Nb\+Input object. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classLayer_a74318a5b352c69b4c404d8c48a38ba24}{get\+Nb\+Nodes}} ()
@@ -75,6 +83,21 @@ Construct a new \mbox{\hyperlink{classLayer}{Layer}} object.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLayer_a4eb1c17bf36df3f82d8fc53662d5307f}\label{classLayer_a4eb1c17bf36df3f82d8fc53662d5307f}} 
+\index{Layer@{Layer}!ApplyAllGradient@{ApplyAllGradient}}
+\index{ApplyAllGradient@{ApplyAllGradient}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{ApplyAllGradient()}{ApplyAllGradient()}}
+{\footnotesize\ttfamily void Layer\+::\+Apply\+All\+Gradient (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Apply all the gradients to update the weights of all the nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classLayer_a193f1760252cf4e1b688dc03a443e13f}\label{classLayer_a193f1760252cf4e1b688dc03a443e13f}} 
 \index{Layer@{Layer}!getActivationFunction@{getActivationFunction}}
 \index{getActivationFunction@{getActivationFunction}!Layer@{Layer}}
@@ -132,6 +155,43 @@ Get the \mbox{\hyperlink{classNode}{Node}} object at the position index.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classNode}{Node}} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a5e67d5b0738cabeb20b05ece5c0046c4}\label{classLayer_a5e67d5b0738cabeb20b05ece5c0046c4}} 
+\index{Layer@{Layer}!getSumOfWeightedError@{getSumOfWeightedError}}
+\index{getSumOfWeightedError@{getSumOfWeightedError}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{getSumOfWeightedError()}{getSumOfWeightedError()}}
+{\footnotesize\ttfamily double Layer\+::get\+Sum\+Of\+Weighted\+Error (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the sum of Weighted Error for the input node index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_abffd7b718450e63d6547216e894be0a6}\label{classLayer_abffd7b718450e63d6547216e894be0a6}} 
+\index{Layer@{Layer}!initError@{initError}}
+\index{initError@{initError}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{initError()}{initError()}}
+{\footnotesize\ttfamily void Layer\+::init\+Error (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs,  }\item[{std\+::vector$<$ double $>$}]{outputs,  }\item[{std\+::vector$<$ double $>$}]{desired\+Outputs }\end{DoxyParamCaption})}
+
+
+
+Method to process the error if the layer is the output layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \\
+\hline
+{\em outputs} & \\
+\hline
+{\em desired\+Outputs} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}\label{classLayer_a3bca6ae0850e82fc2ca1198330489a4d}} 
 \index{Layer@{Layer}!operator=@{operator=}}
 \index{operator=@{operator=}!Layer@{Layer}}
@@ -145,6 +205,23 @@ Equal operator for the \mbox{\hyperlink{classLayer}{Layer}} object.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classLayer}{Layer}}\& 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classLayer_a31f402439a6402753b5e142ac403ee58}\label{classLayer_a31f402439a6402753b5e142ac403ee58}} 
+\index{Layer@{Layer}!processError@{processError}}
+\index{processError@{processError}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{processError()}{processError()}}
+{\footnotesize\ttfamily void Layer\+::process\+Error (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{inputs,  }\item[{\mbox{\hyperlink{classLayer}{Layer}}}]{next\+Layer }\end{DoxyParamCaption})}
+
+
+
+Method to process the error of this layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \\
+\hline
+{\em next\+Layer} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classLayer_ac55e49ac5a2cd79956232b629b463158}\label{classLayer_ac55e49ac5a2cd79956232b629b463158}} 
 \index{Layer@{Layer}!processOutputs@{processOutputs}}
 \index{processOutputs@{processOutputs}!Layer@{Layer}}
