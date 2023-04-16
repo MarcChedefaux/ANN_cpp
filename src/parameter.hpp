@@ -1,10 +1,10 @@
 #ifndef PARAMETER
 #define PARAMETER
 
-#define MAX_WEIGHT 200
+#define MAX_WEIGHT 10
 
-#define LEARNING_RATE 0.1f
+#define LEARNING_RATE 0.3f
 
-#define NMAX_EPOCH 10
+#define NMAX_EPOCH 20
 
 #endif

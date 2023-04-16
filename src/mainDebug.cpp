@@ -2,6 +2,7 @@
 #include "node.hpp"
 #include "activationFunction.hpp"
 #include "layer.hpp"
+#include "dataset.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -44,38 +45,16 @@ void printNetwork(Network n) {
 }
 
 int main() {
-    bool save = false;
+    dataset ds = generateDataset1(200,20);
+    std::vector<int>size = {2,4,4,2};
+    Network net(size, sigmoid);
 
-    if (save) {
-        std::vector<int> size = {2,4,5,9,10};
-        std::vector<activation> act = {identity, gaussian, binarystep, sigmoid};
-        Network net(size, act);
-
-        printNetwork(net);
-        std::cout << std::endl << std::endl;
-        std::vector<double> input = {1,3};
-        std::vector<double> output = net.processOutputs(input);
-
-        for (int i=0; i<output.size(); i++) {
-            std::cout << output.at(i) << std::endl;
-        }
-
-        net.SaveNetwork("net.bin");
-
-    }
-    else {
-        Network net;
-        net.LoadNetwork("net.bin");
-
-
-        printNetwork(net);
-        std::cout << std::endl << std::endl;
-        std::vector<double> input = {1,3};
-        std::vector<double> output = net.processOutputs(input);
-
-        for (int i=0; i<output.size(); i++) {
-            std::cout << output.at(i) << std::endl;
-        }
+    net.train(ds);
+    data test = ds.test;
+    for (int i = 0; i<test.dataCount; i++) {
+        std::cout << "Test " << i+1 <<std::endl;
+        std::vector<double> out = net.processOutputs(test.inputs.at(i));
+        std::cout << out.at(0) << ";" << out.at(1) << " vs desired : " << test.outputs.at(i).at(0) << ";" << test.outputs.at(i).at(1) << std::endl;
     }
     
 }

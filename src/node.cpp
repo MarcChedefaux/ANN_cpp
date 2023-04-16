@@ -50,6 +50,7 @@ void Node::applyGradient(std::vector<double> inputs) {
     for (int i = 0; i<nbInput; i++) {
         weights.at(i) = weights.at(i) - LEARNING_RATE * error *  inputs.at(i);
     }
+    bias = bias - LEARNING_RATE * error;
 }
 
 double Node::getWeightedError(int index) {

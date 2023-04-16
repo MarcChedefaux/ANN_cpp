@@ -8,4 +8,5 @@ add_executable(ANN
     layer.cpp
     node.cpp
     activationFunction.cpp
+    dataset.cpp
     )
