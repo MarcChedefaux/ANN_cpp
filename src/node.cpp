@@ -3,9 +3,9 @@
 Node::Node(activation function, int nbIn) {
     nbInput = nbIn;
     activationfunction = function;
-    bias =  200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
+    bias =  2 * MAX_WEIGHT * (double) (rand() - RAND_MAX/2)/RAND_MAX;
     for (int i = 0; i<nbInput; i++) {
-        double newWeight = 200 * (double) (rand() - RAND_MAX/2)/RAND_MAX;
+        double newWeight = 2 * MAX_WEIGHT * (double) (rand() - RAND_MAX/2)/RAND_MAX;
         weights.emplace_back(newWeight);
     }
 }
