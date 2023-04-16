@@ -3,8 +3,8 @@
 
 #define MAX_WEIGHT 10
 
-#define LEARNING_RATE 0.3f
+#define LEARNING_RATE 0.05f
 
-#define NMAX_EPOCH 20
+#define NMAX_EPOCH 200
 
 #endif

@@ -33,5 +33,7 @@
 
 *.bin
 
+.vscode
+
 src/build/*
 test/build/*

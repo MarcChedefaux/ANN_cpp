@@ -7,6 +7,7 @@
 #include "dataset.hpp"
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 
 /**
  * @brief Class Network
@@ -62,6 +63,14 @@ class Network {
          * @param ds
          */
         void train(dataset ds);
+        
+        /**
+         * @brief Evaluate the Network on the data.
+         * 
+         * @param d 
+         * @return double 
+         */
+        double evaluate(data d);
 
         /**
          * @brief Get the Layer Size object

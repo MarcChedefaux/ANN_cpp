@@ -45,16 +45,9 @@ void printNetwork(Network n) {
 }
 
 int main() {
-    dataset ds = generateDataset1(200,20);
+    dataset ds = generateDataset1(400,40);
     std::vector<int>size = {2,4,4,2};
     Network net(size, sigmoid);
 
     net.train(ds);
-    data test = ds.test;
-    for (int i = 0; i<test.dataCount; i++) {
-        std::cout << "Test " << i+1 <<std::endl;
-        std::vector<double> out = net.processOutputs(test.inputs.at(i));
-        std::cout << out.at(0) << ";" << out.at(1) << " vs desired : " << test.outputs.at(i).at(0) << ";" << test.outputs.at(i).at(1) << std::endl;
-    }
-    
 }

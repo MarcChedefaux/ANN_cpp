@@ -35,7 +35,7 @@ void Network::train(dataset ds) {
     std::cout << "--- Training ---" << std::endl;
     data trainData = ds.train;
     for (int epoch = 1; epoch <= NMAX_EPOCH; epoch++) {
-        std::cout << "Epoch " << epoch << std::endl;
+        std::cout << "Epoch " << epoch << "/ perf : " << evaluate(ds.train) << std::endl;
 
         for (int line = 0; line < trainData.dataCount; line++) {
             std::vector<std::vector<double>> intermediateInputs;
@@ -60,6 +60,18 @@ void Network::train(dataset ds) {
             }
         }
     }
+}
+
+double Network::evaluate(data d) {
+    int countCorrect = 0;
+    for (int sample = 0; sample < d.dataCount; sample++) {
+        std::vector<double> out = processOutputs(d.inputs.at(sample));
+        int pos = std::distance(out.begin(),std::max_element(out.begin(), out.end()));
+
+        if(d.outputs.at(sample).at(pos) == 1) countCorrect ++;
+    }
+    
+    return (double)countCorrect/(d.dataCount);
 }
 
 int Network::getLayerSize(int index) {
